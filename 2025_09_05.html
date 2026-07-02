@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOGC - 5 Settembre 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="page-header-title">5 Settembre 2025</h1>
+        <a href="index.html" class="nav-btn">Torna alla Home</a>
+    </header>
+    <main>
+        <div class="toc">
+            <h3>Indice dell'Esame</h3>
+            <ul>
+                <li><strong>Reti e Protocolli di Comunicazione</strong>
+                    <ul>
+                        <li><a href="#q1">1. Cavo in fibra ottica</a></li>
+                        <li><a href="#q2">2. Cyber crimini secondo l'ordinamento italiano</a></li>
+                        <li><a href="#q3">3. Furto di Identità Digitale</a></li>
+                        <li><a href="#q4">4. Livello 6 del Modello ISO/OSI</a></li>
+                        <li><a href="#q5">5. Comunicazione logica tra Host ISO/OSI</a></li>
+                        <li><a href="#q6">6. Protocollo TCP/IP</a></li>
+                        <li><a href="#q7">7. Collisione nel protocollo Ethernet</a></li>
+                        <li><a href="#q8">8. Subnet 132.234.110.173/12</a></li>
+                        <li><a href="#q9">9. Topologia a Maglia Completa</a></li>
+                    </ul>
+                </li>
+                <li><strong>Azienda e Organizzazione</strong>
+                    <ul>
+                        <li><a href="#q10">10. Aziende di produzione</a></li>
+                    </ul>
+                </li>
+                <li><strong>Sicurezza Informatica: Processi e Standard</strong>
+                    <ul>
+                        <li><a href="#q11">11. Incident Response Plan</a></li>
+                        <li><a href="#q12">12. Processi di Cyber Security</a></li>
+                        <li><a href="#q13">13. Area "Supporto" ISO/IEC 27001</a></li>
+                        <li><a href="#q14">14. Riferimenti Informativi NIST CSF</a></li>
+                        <li><a href="#q15">15. Zone e Conduit secondo ISA/IEC 62443</a></li>
+                        <li><a href="#q16">16. Differenze tra IACS e sistemi IT</a></li>
+                    </ul>
+                </li>
+                <li><strong>Normativa, Privacy e Informatica Forense</strong>
+                    <ul>
+                        <li><a href="#q17">17. Il Diritto alla Privacy</a></li>
+                        <li><a href="#q18">18. Fasi dell'Informatica Forense</a></li>
+                        <li><a href="#q19">19. Tipologie di Dati secondo il GDPR</a></li>
+                        <li><a href="#q20">20. Figure di Riferimento (Codice della Privacy)</a></li>
+                        <li><a href="#q21">21. Il Titolare del Trattamento (GDPR)</a></li>
+                    </ul>
+                </li>
+                <li><strong>Gestione del Rischio e Sicurezza IT/OT</strong>
+                    <ul>
+                        <li><a href="#q22">22. La valutazione del Rischio</a></li>
+                        <li><a href="#q23">23. Differenze tra sistemi IT e OT</a></li>
+                        <li><a href="#q24">24. Convergenza IT-OT</a></li>
+                        <li><a href="#q25">25. Endpoint Protection</a></li>
+                    </ul>
+                </li>
+                <li><strong>Organizzazione e Governance della Cybersecurity</strong>
+                    <ul>
+                        <li><a href="#q26">26. Struttura Organizzativa Funzionale</a></li>
+                        <li><a href="#q27">27. Allineamento tra obiettivi IT e business</a></li>
+                        <li><a href="#q28">28. Gestione del Rischio cyber nelle organizzazioni</a></li>
+                        <li><a href="#q29">29. Formazione dei dipendenti sul rischio cyber</a></li>
+                        <li><a href="#q30">30. Esercizio: risparmio di archiviazione in cloud</a></li>
+                    </ul>
+                </li>
+                <li><strong>Esercizi Pratici</strong>
+                    <ul>
+                        <li><a href="#ex1">Esercizio 1: Tabelle di routing</a></li>
+                        <li><a href="#ex2">Esercizio 2: Topologia DMZ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Reti e Protocolli di Comunicazione</h2>
+
+        <div class="question-block" id="q1">
+            <h4 class="question-title">1. Quali dei seguenti elementi costituiscono un cavo in fibra ottica?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Core</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Cladding</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Buffer</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Wrapping</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Jacket</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Sheathing</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Un cavo in fibra ottica è composto da nucleo (core), mantello (cladding), strato di protezione (buffer)
+                e rivestimento esterno (jacket).
+                Termini come wrapping e sheathing non corrispondono alla struttura standard richiesta in ambito
+                trasmissivo.
+            </div>
+        </div>
+
+        <div class="question-block" id="q2">
+            <h4 class="question-title">2. Quali dei seguenti sono crimini informatici o cyber crimini secondo
+                l'ordinamento italiano?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Frodi tramite e-mail e Internet</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Tutti i casi di Hacktivismo</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Furto d'identità</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Furto dei dati finanziari o dei dettagli delle carte di
+                        credito</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Furto di valuta da sportelli ATM (Bancomat)</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Cyber-estorsione</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il diritto penale italiano riconosce come cybercrimini le frodi telematiche, il furto d'identità, il
+                furto di dati finanziari e la cyber-estorsione.
+                L'hacktivismo non costituisce sempre reato in ogni sua forma, mentre il furto fisico di contante da un
+                ATM è un reato tradizionale (furto), non specificamente informatico.
+            </div>
+        </div>
+
+        <div class="question-block" id="q3">
+            <h4 class="question-title">3. Il Furto di Identità Digitale</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Punito come "Sostituzione di persona" e "Frode
+                        Informatica"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Assimilato al solo reato di "Truffa"</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Può avvenire mediante Phishing</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Uso illecito dell'insieme dei dati che definiscono un
+                        individuo</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Relativo ai soli dati biometrici</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. È un reato amministrativo</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il furto di identità digitale è un reato penale, riconducibile a sostituzione di persona e frode
+                informatica, spesso realizzato tramite phishing.
+                Riguarda l'insieme dei dati che identificano una persona nelle interazioni elettroniche, non solo i dati
+                biometrici.
+            </div>
+        </div>
+
+        <div class="question-block" id="q4">
+            <h4 class="question-title">4. Il livello 6 del Modello ISO/OSI</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Trasforma i dati in un formato standardizzato</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Realizza Routing di livello presentazione</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Offre servizi comuni come crittografia, compressione</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Utilizza tecniche di multiplazione (multiplexing)</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Rende compatibili le rappresentazioni dei dati tra codifiche
+                        diverse</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Rende la comunicazione indipendente dai sistemi operativi</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il livello di Presentazione (6) gestisce sintassi e semantica dei dati scambiati: formattazione,
+                crittografia, compressione e conversione tra codifiche.
+                Non si occupa di routing (funzione del livello Rete) né di multiplazione (tipica dei livelli
+                Fisico/Trasporto).
+            </div>
+        </div>
+
+        <div class="question-block" id="q5">
+            <h4 class="question-title">5. La comunicazione logica tra due Host nello stack ISO/OSI</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può avvenire tra livelli ISO/OSI differenti tra mittente e
+                        destinatario</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Avviene tra livelli omologhi ad eccezione del livello 1</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Utilizza sempre fisicamente il livello 1</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Percorre i livelli dello stack in discesa e in salita</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Si realizza mediante interazione solo con i livelli
+                        superiori</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Semplifica la comunicazione tra due Host</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nel modello ISO/OSI la comunicazione "logica" avviene sempre tra livelli omologhi (stesso livello su
+                mittente e destinatario), tranne per il livello Fisico dove la comunicazione è realmente fisica.
+                Ogni livello interagisce sia con quello superiore sia con quello inferiore, non solo con i livelli
+                superiori.
+            </div>
+        </div>
+
+        <div class="question-block" id="q6">
+            <h4 class="question-title">6. Il Protocollo TCP/IP</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un protocollo orientato alla connessione</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. TCP assicura trasmissione affidabile, ordinata e senza
+                        errori</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. IP si occupa dell'instradamento dei pacchetti</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Non effettua la verifica che tutti i pacchetti siano
+                        arrivati</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. È l'acronimo di Transmission Control Protocol/Internet
+                        Protocol</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. È l'acronimo di Transmission Control Packets/Internet
+                        Protocol</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                TCP è orientato alla connessione e garantisce affidabilità, ordine e controllo degli errori nella
+                consegna, mentre IP si occupa dell'instradamento dei pacchetti.
+                L'acronimo corretto è Transmission Control Protocol, non "Packets".
+            </div>
+        </div>
+
+        <div class="question-block" id="q7">
+            <h4 class="question-title">7. Nella comunicazione con il protocollo Ethernet in caso di avvenuta collisione
+            </h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sospende la trasmissione e trasmette una sequenza di
+                        jamming</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Sospende e trasmette parte del pacchetto già trasmessa più un codice
+                        in coda</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Trasmette il codice in testa e il pacchetto già trasmesso in
+                        coda</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Ripete il tentativo dopo un tempo pseudocasuale</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Ripete il tentativo con una frequenza fissa</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Interrompe le trasmissioni e attende la fine di tutte le trasmissioni
+                        sul bus</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                In caso di collisione Ethernet la stazione invia un jam signal per segnalare la collisione a tutta la
+                rete, quindi ritenta la trasmissione dopo un intervallo di attesa calcolato con un algoritmo di backoff
+                pseudocasuale, non fisso, per ridurre la probabilità di nuove collisioni.
+            </div>
+        </div>
+
+        <div class="question-block" id="q8">
+            <h4 class="question-title">8. La subnet 132.234.110.173/12</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Ha 4.096 indirizzamenti disponibili</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Ha come indirizzo di broadcast 132.239.255.255</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Ha come indirizzo di rete 132.224.0.0</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Ha come netmask 255.240.0.0</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Il primo indirizzo Host disponibile è 132.224.0.1</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. L'ultimo indirizzo disponibile è 132.234.255.254</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Con maschera /12 (255.240.0.0) il blocco copre gli indirizzi da 132.224.0.0 a 132.239.255.255, per un
+                totale di 2^20 indirizzi, ben più dei 4.096 indicati.
+                Il primo host utilizzabile è 132.224.0.1 e l'ultimo è 132.239.255.254, non 132.234.255.254.
+            </div>
+        </div>
+
+        <div class="question-block" id="q9">
+            <h4 class="question-title">9. Quanti sono i rami di una topologia di rete a Maglia Completa?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. (N-1)/2</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. N*(N-1)/2</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. (N-1)²</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. N-1</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. N/2*(N-1)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. (N-1)!</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                In una topologia a maglia completa ogni nodo è collegato a tutti gli altri N-1 nodi.
+                Il numero totale di collegamenti corrisponde alle combinazioni di N elementi a due a due, cioè N(N-1)/2,
+                formula matematicamente equivalente a N/2·(N-1).
+            </div>
+        </div>
+
+        <h2>Azienda e Organizzazione</h2>
+
+        <div class="question-block" id="q10">
+            <h4 class="question-title">10. Le aziende di produzione</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Hanno obiettivi primari legati alla sopravvivenza
+                        dell'impresa</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Sono solo le aziende che assemblano/forniscono
+                        direttamente</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Sono sia di produzione diretta sia indiretta (valore
+                        aggiunto)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Hanno tra gli obiettivi la massimizzazione del profitto</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Hanno tra gli obiettivi la soddisfazione di un limitato gruppo di
+                        persone</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Non possono essere aziende individuali</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Le aziende di produzione comprendono sia quelle che realizzano beni/servizi direttamente sia quelle che
+                aggiungono valore a beni già esistenti.
+                Possono assumere qualsiasi forma giuridica, incluse le imprese individuali, e perseguono obiettivi di
+                sopravvivenza e profitto, non la soddisfazione di un gruppo ristretto.
+            </div>
+        </div>
+
+        <h2>Sicurezza Informatica: Processi e Standard</h2>
+
+        <div class="question-block" id="q11">
+            <h4 class="question-title">11. L'Incident Response Plan (Piano di risposta agli incidenti)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Permette di rispondere con misure controffensive verso
+                        l'attaccante</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Permette di individuare incidenti/attacchi e mitigarne il
+                        danno</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Esegue anche la post analysis per delineare la portata
+                        dell'incidente</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. È un insieme di procedure documentate per ogni fase della
+                        risposta</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Se ben strutturato può non essere aggiornato
+                        frequentemente</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Include linee guida per ruoli, responsabilità e processi
+                        standardizzati</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Un Incident Response Plan è un insieme di procedure documentate finalizzate a individuare e contenere
+                gli incidenti, non a condurre azioni offensive verso l'attaccante.
+                Richiede aggiornamento periodico e comprende ruoli, responsabilità e piani di comunicazione, oltre a
+                un'analisi post-incidente.
+            </div>
+        </div>
+
+        <div class="question-block" id="q12">
+            <h4 class="question-title">12. Quali dei seguenti sono Processi di Cyber Security</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Il monitoraggio degli Incidenti Informatici</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. La gestione degli incidenti informatici</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. La gestione delle patch di sistema</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. La gestione delle vulnerabilità</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. La gestione delle obsolescenze</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. La disponibilità delle risorse</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                I principali processi di cyber security includono monitoraggio e gestione degli incidenti, gestione
+                delle vulnerabilità e delle obsolescenze tecnologiche.
+                Il patching è un'attività operativa IT più che un processo di sicurezza a sé, così come la disponibilità
+                delle risorse è un tema di IT management generale.
+            </div>
+        </div>
+
+        <div class="question-block" id="q13">
+            <h4 class="question-title">13. L'area tematica dei requisiti ISO/IEC 27001 "Supporto" definisce che</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. L'organizzazione abbia persone, competenze, infrastrutture e ambiente
+                        necessari</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Siano identificati i requisiti di competenza del personale
+                        coinvolto</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Il personale sia sensibilizzato sulla politica di
+                        sicurezza</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Siano stabiliti processi di comunicazione efficaci</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Esistano le basi per l'implementazione ma non per il
+                        mantenimento</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Le attività operative siano completamente realizzate</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'area "Supporto" riguarda risorse, competenze, consapevolezza e comunicazione necessarie per istituire
+                e mantenere nel tempo un SGSI.
+                La realizzazione operativa vera e propria rientra invece nella clausola "Attività Operative", non nel
+                Supporto.
+            </div>
+        </div>
+
+        <div class="question-block" id="q14">
+            <h4 class="question-title">14. I Riferimenti Informativi nel Framework Core del NIST CSF</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono esaustivi, rappresentano regole precise da applicare</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Sono collegamenti a fonti esterne per implementare le attività
+                        descritte</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Possono fare riferimento ad altri standard internazionali</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Sono solo illustrativi</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Sono obbligatori</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Fanno da ponte tra sottocategorie e pratiche specifiche di
+                        settore</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                I Riferimenti Informativi del NIST CSF sono esempi illustrativi e non esaustivi, che collegano le
+                sottocategorie del framework a standard e pratiche di settore esistenti, senza avere carattere
+                prescrittivo o obbligatorio.
+            </div>
+        </div>
+
+        <div class="question-block" id="q15">
+            <h4 class="question-title">15. Zone e conduit secondo ISA/IEC 62443</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Elementi chiave per segmentazione e sicurezza negli ambienti
+                        industriali</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Elementi chiave per segmentazione anche fuori dagli ambiti
+                        industriali</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Aiutano a ridurre l'impatto delle violazioni, limitando la
+                        propagazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Sono definiti con approccio basato sul rischio</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Sono definiti solo sul rischio di perdita dei dati
+                        sensibili</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Sono definiti indipendentemente dall'inventario degli
+                        asset</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Zone e conduit sono lo strumento cardine della segmentazione secondo ISA/IEC 62443 e si applicano, per
+                estensione concettuale, anche fuori dal contesto industriale.
+                La loro definizione richiede un'analisi del rischio completa (non solo sulla riservatezza dei dati)
+                basata su un accurato inventario degli asset.
+            </div>
+        </div>
+
+        <div class="question-block" id="q16">
+            <h4 class="question-title">16. Per cosa differiscono i sistemi di controllo e automazione industriale (IACS)
+                rispetto ai sistemi IT?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. IACS controlla processi fisici, IT gestisce
+                        informazione/comunicazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. IACS ha funzionamento real time e deterministico, raramente
+                        l'IT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. IACS usa solo Windows/Linux, IT solo Windows</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Rischi IACS su business continuity/safety, IT sulla triade
+                        CIA</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. IACS necessita hardware industriale dedicato, IT hardware di
+                        mercato</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Ambienti di configurazione e linguaggi sono identici</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Gli IACS si differenziano dai sistemi IT per la finalità (controllo di processi fisici vs gestione
+                dell'informazione), per il determinismo real-time richiesto, per l'hardware industriale dedicato e per
+                priorità di rischio orientate a safety e continuità operativa più che alla sola triade CIA.
+            </div>
+        </div>
+
+        <h2>Normativa, Privacy e Informatica Forense</h2>
+
+        <div class="question-block" id="q17">
+            <h4 class="question-title">17. Il Diritto alla Privacy</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Nasce negli Stati Uniti nel 1890 come "right to be let
+                        alone"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Significava libertà sui propri affari privati anche se coinvolgono
+                        gli altri</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Viene elaborato in Italia dagli anni '60-'70 come diritto
+                        all'autodeterminazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Attualmente inteso anche come diritto a esprimere liberamente le
+                        aspirazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Con l'era digitale, anche come diritto a impedire la rilevazione di
+                        info personali</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. È stato elaborato in Europa negli anni '60</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il diritto alla privacy nasce negli USA nel 1890 come "diritto a essere lasciati soli", riferito ad
+                affari privati che non coinvolgono altri.
+                In Italia viene rielaborato dagli anni '60-'70 come diritto all'autodeterminazione della personalità,
+                ampliandosi con l'era digitale alla protezione dei propri dati.
+            </div>
+        </div>
+
+        <div class="question-block" id="q18">
+            <h4 class="question-title">18. Le fasi dell'Informatica Forense</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Identificazione: individuare i dati digitali rilevanti sui
+                        dispositivi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Raccolta: acquisizione dei sistemi e messa in sicurezza dei
+                        supporti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Acquisizione: copia legale di tutti i dati come prova</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Analisi: estrazione dei dati rilevanti e valutazione delle
+                        strategie</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Elaborazione: estrazione delle informazioni dai dati
+                        "grezzi"</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Presentazione: relazione tecnica in formato "legale"</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il processo di informatica forense segue le fasi canoniche di Identificazione, Raccolta, Acquisizione
+                (copia forense), Analisi e Presentazione.
+                Non esiste una fase distinta denominata "Elaborazione", poiché l'estrazione delle informazioni rientra
+                già nella fase di Analisi.
+            </div>
+        </div>
+
+        <div class="question-block" id="q19">
+            <h4 class="question-title">19. Quali tipologie di Dati sono previste dal Regolamento Europeo 2016/679 GDPR?
+            </h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Dati personali: persona fisica identificata o
+                        identificabile</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Dati personali identificabile anche indirettamente</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Dati particolari: origine razziale/etnica, opinioni politiche,
+                        ecc.</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Dati particolari: dati bancari o finanziari</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Dati su condanne penali con controllo dell'Autorità
+                        Pubblica</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Dati di persone giuridiche</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il GDPR classifica come "particolari" (sensibili) i dati su origine razziale/etnica, opinioni politiche,
+                salute ecc., mentre i dati finanziari/bancari rientrano tra i dati personali comuni.
+                Il Regolamento si applica solo alle persone fisiche, non alle persone giuridiche.
+            </div>
+        </div>
+
+        <div class="question-block" id="q20">
+            <h4 class="question-title">20. Le Figure di Riferimento per il trattamento dei dati, ai sensi del "Codice
+                della Privacy"</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Titolare del trattamento</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Responsabile del trattamento</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Preposto</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Destinatario del trattamento</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Terzi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Competente</span><span class="answer-badge answer-f">Falso</span>
+                </li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Codice Privacy individua come figure di riferimento il Titolare, il Responsabile del trattamento, i
+                Destinatari e i Terzi.
+                "Preposto" e "Competente" non sono qualifiche previste dalla normativa in materia di protezione dei
+                dati.
+            </div>
+        </div>
+
+        <div class="question-block" id="q21">
+            <h4 class="question-title">21. Il "Titolare del Trattamento" secondo il Regolamento Europeo 2016/679 GDPR
+            </h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può essere un'azienda</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Può essere un'organizzazione in genere</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Può essere un'autorità pubblica o istituzione dello stato</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Può essere una persona fisica</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Non è responsabile delle misure di sicurezza</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Stabilisce le finalità del trattamento</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Titolare del trattamento può essere qualsiasi soggetto — persona fisica, azienda, ente pubblico o
+                organizzazione — che determina le finalità e i mezzi del trattamento, ed è per questo tenuto a
+                garantirne la sicurezza, non esonerato da tale responsabilità.
+            </div>
+        </div>
+
+        <h2>Gestione del Rischio e Sicurezza IT/OT</h2>
+
+        <div class="question-block" id="q22">
+            <h4 class="question-title">22. La valutazione del Rischio</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Viene effettuata su classi omogenee per tipologia</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Viene effettuata da due prospettive: Impatto e
+                        Probabilità</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Utilizza un indice numerico dato dal prodotto Impatto x
+                        Probabilità</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Si associa un valore numerico compreso tra 1 e 10</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Si effettua solo nell'ambito della sicurezza informatica</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Viene rappresentata con diagramma multidimensionale
+                        (X,Y,Z)</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il rischio viene generalmente valutato come prodotto tra Impatto e Probabilità, su classi omogenee di
+                eventi.
+                Non esiste una scala numerica standard fissa (1-10) né una rappresentazione tridimensionale, e la
+                metodologia si applica a molti ambiti oltre alla sola sicurezza informatica.
+            </div>
+        </div>
+
+        <div class="question-block" id="q23">
+            <h4 class="question-title">23. I sistemi IT e OT differiscono (dal punto di vista dei fattori critici per la
+                Cybersecurity)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Rischi: perdita dati per IT, business continuity/sicurezza fisica per
+                        OT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Intervento: senza vincoli temporali IT, vincoli di continuità
+                        OT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Risposta: non real time per IT, deterministica/real time per
+                        OT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. SO: standard di mercato per IT, non standard/real time per
+                        OT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Conseguenze OT limitate, nel caso peggiore, alla perdita di
+                        dati</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Disponibilità: molto elevata per IT, più contenuta per OT</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                I sistemi OT danno priorità alla sicurezza fisica e alla continuità del processo produttivo, richiedono
+                risposte deterministiche in tempo reale e usano SO non standard.
+                Un incidente OT può mettere a rischio persone e impianti (non solo i dati) e richiede tipicamente una
+                disponibilità molto elevata, non contenuta.
+            </div>
+        </div>
+
+        <div class="question-block" id="q24">
+            <h4 class="question-title">24. Si parla di Convergenza IT-OT</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Per ridurre il gap organizzativo, tecnologico e culturale tra IT e
+                        OT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Dove è necessaria integrazione tra governo dell'azienda e
+                        produzione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Solo se la tecnologia IT è equivalente a quella OT</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Nei casi in cui non esiste un reparto che gestisce la tecnologia
+                        OT</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Nei casi in cui non esiste un reparto che gestisce la tecnologia
+                        IT</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Solo nelle aziende che producono prodotti informatici</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La convergenza IT-OT descrive il processo di avvicinamento organizzativo, tecnologico e culturale tra i
+                due mondi, nelle aziende che devono integrare gestione aziendale e produzione.
+                Non presuppone equivalenza tecnologica né l'assenza di reparti dedicati, e riguarda qualsiasi settore
+                industriale.
+            </div>
+        </div>
+
+        <div class="question-block" id="q25">
+            <h4 class="question-title">25. L'Endpoint Protection</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Realizza il tunneling nella comunicazione interno-esterno</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Si riferisce alla protezione di ogni dispositivo con accesso alla
+                        rete aziendale</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Può usare tecniche di Machine Learning per minacce
+                        zero-day</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Realizza la protezione antimalware e antivirus</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Non ha mai un firewall integrato</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Può realizzare la security dei dispositivi Mobile</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'Endpoint Protection copre qualsiasi dispositivo connesso alla rete aziendale, inclusi i mobile,
+                offrendo funzioni antimalware spesso integrate con firewall e machine learning per il rilevamento di
+                minacce sconosciute.
+                Non riguarda invece il tunneling delle comunicazioni, funzione tipica delle VPN.
+            </div>
+        </div>
+
+        <h2>Organizzazione e Governance della Cybersecurity</h2>
+
+        <div class="question-block" id="q26">
+            <h4 class="question-title">26. La Struttura Organizzativa Funzionale</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Attività divise per "specialità", raggruppate tra loro</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Attività divise per "specialità" raggruppate per area
+                        geografica</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Vantaggio: incremento dell'efficienza della direzione</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Svantaggio: potere decisionale assegnato a un solo general
+                        manager</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Vantaggio: moltiplicazione dei livelli gerarchici</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Rischio: eccessiva focalizzazione del manager sulla propria
+                        funzione</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La struttura funzionale raggruppa le attività per specialità omogenee, favorendo l'efficienza dei
+                manager specializzati in un singolo settore.
+                Comporta però il rischio che ciascun responsabile dia eccessiva rilevanza alla propria funzione, senza
+                moltiplicare i livelli gerarchici né dividere per area geografica.
+            </div>
+        </div>
+
+        <div class="question-block" id="q27">
+            <h4 class="question-title">27. Perché è necessario mantenere allineati gli obiettivi IT e il business
+                aziendale?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Per massimizzare gli effetti degli investimenti nel reparto e nelle
+                        infrastrutture IT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Perché la digitalizzazione può diventare un vantaggio
+                        competitivo</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Perché lo impongono le normative europee</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Perché è necessario aggiornare l'impatto dell'IT sulla business
+                        continuity</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Perché il budget IT deriva dal valore espresso nel Piano Strategico
+                        aziendale</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Perché il Portfolio IT deve allineare la strategia ICT</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Allineare IT e business massimizza il valore degli investimenti tecnologici e rende la digitalizzazione
+                un vantaggio competitivo, con un budget IT coerente con il piano strategico.
+                È la Strategia ICT a guidare il Portfolio IT, non viceversa, e non si tratta di un obbligo normativo
+                europeo.
+            </div>
+        </div>
+
+        <div class="question-block" id="q28">
+            <h4 class="question-title">28. La Gestione del Rischio di cybersecurity nelle organizzazioni</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può essere indirizzata da una commissione che risponde al
+                        CdA</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Può essere coordinata dal responsabile del rischio</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Viene assegnata come responsabilità al CISO (se esiste)</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Si realizza mediante la sola identificazione dei rischi più
+                        probabili</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. È un fattore rilevante solo per le infrastrutture
+                        critiche</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Non fa riferimento a nessuno standard</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La gestione del rischio cyber è tipicamente affidata a comitati che rispondono al CdA, coordinati da un
+                risk manager o dal CISO, e si basa su standard riconosciuti (es. ISO 27001, NIST).
+                Riguarda tutte le organizzazioni, non solo le infrastrutture critiche, e richiede una valutazione
+                completa, non solo dei rischi più probabili.
+            </div>
+        </div>
+
+        <div class="question-block" id="q29">
+            <h4 class="question-title">29. Perché è importante formare i dipendenti di un'azienda sul rischio di
+                cybersecurity?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Perché la consapevolezza è la principale arma di difesa</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Perché le tecnologie di protezione devono supportare le
+                        persone</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Perché le minacce evolvono e le vulnerabilità non sono solo
+                        tecnologiche</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Perché permette di ridurre drasticamente gli investimenti in
+                        tecnologie</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Perché ogni funzione o reparto deve essere coinvolto, non solo
+                        l'IT</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Perché permette di ridurre il personale nel reparto IT</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La formazione rende i dipendenti consapevoli delle minacce, che evolvono continuamente e spesso
+                sfruttano il fattore umano più che vulnerabilità tecniche.
+                Coinvolge tutta l'organizzazione, ma non sostituisce né riduce gli investimenti tecnologici, né incide
+                sul dimensionamento del reparto IT.
+            </div>
+        </div>
+
+        <div class="question-block" id="q30">
+            <h4 class="question-title">30. Per ridurre i dati archiviati in cloud, un'azienda riduce la frequenza di
+                archiviazione di 10.000 registri (da 32 byte) da 1 sec a 1 minuto: quanto spazio risparmia in un mese
+                (30 gg)?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Meno del 30% dei dati trasmessi prima della riduzione</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Più del 98% dei dati trasmessi prima della riduzione</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Circa 760 Gbyte al mese</span><span
+                        class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Circa 760 Mbyte al mese</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Circa 760 Kbyte al mese</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Una quantità economicamente non rilevante</span><span
+                        class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Passando da una registrazione al secondo a una al minuto il volume di dati si riduce di un fattore 60,
+                generando un risparmio superiore al 98%, pari a circa 760 GB su base mensile (10.000 record da 32 byte
+                campionati nel tempo): una quantità tutt'altro che trascurabile in termini di costi di storage.
+            </div>
+        </div>
+
+        <h2>Esercizi Pratici</h2>
+
+        <div class="question-block" id="ex1">
+            <h4 class="question-title">Esercizio 1: Tabelle di routing (costi di trasmissione)</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> data una rete a 6 router con costi di trasmissione differenti per ogni
+                collegamento, determinare per ciascun router la rotta a costo minimo verso ciascuna rete remota
+                (algoritmo tipo Dijkstra/vettore-distanza).
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">Router</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">100</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">101</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">102</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">103</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">104</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">105</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R1</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Diretto</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R2</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R2</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R4</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R4</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R4</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R2</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R1</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Diretto</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R1</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R3</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Diretto</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R4</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R1</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R1</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Diretto</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R4</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R3</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R4</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Diretto</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R6</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R2</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R2</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R3</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">R5</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Diretto</td>
+                </tr>
+            </table>
+            <div class="motivazione" style="margin-top:1rem;">
+                <strong>Motivazione:</strong>
+                Ogni router sceglie, per ciascuna rete di destinazione, il next-hop che minimizza il costo cumulativo
+                del percorso, tenendo conto dei costi indicati su ogni singola tratta e non del solo numero di salti.
+            </div>
+        </div>
+
+        <div class="question-block" id="ex2">
+            <h4 class="question-title">Esercizio 2: Topologia con DMZ (Demilitarized Zone)</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> associare a ciascun punto numerato della topologia il dispositivo corretto tra
+                Router (A), Firewall (B), Switch (C), IPS/altro (D), VPN (E), Firewall ridondato (F).
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">1</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">2</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">3</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">4</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">5</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">6</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem;">7</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">F</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">C</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">C</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">B</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">C</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">B</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">B</td>
+                </tr>
+            </table>
+            <div class="motivazione" style="margin-top:1rem;">
+                <strong>Domanda:</strong> Che differenza esiste tra il concetto di Zona secondo IEC 62443 e una
+                Demilitarized Zone (DMZ)?<br>
+                <strong>Risposta:</strong> La Zona IEC 62443 è un concetto più ampio della DMZ: la DMZ è una specifica
+                architettura di rete perimetrale, mentre la Zona IEC 62443 raggruppa risorse (logiche o fisiche)
+                accomunate da requisiti di sicurezza comuni, indipendentemente dalla posizione topologica.
+            </div>
+            <div class="motivazione" style="margin-top:1rem;">
+                <strong>Domanda:</strong> Quali sono i criteri per differenziare due Zone secondo IEC 62443?<br>
+                <strong>Risposta:</strong> Le zone vengono differenziate in base alle funzioni svolte e ai requisiti di
+                sicurezza che devono soddisfare, definiti in relazione al livello di rischio (Security Level) associato
+                a ciascun raggruppamento di asset.
+            </div>
+        </div>
+
+    </main>
+    <button id="back-to-top">↑</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

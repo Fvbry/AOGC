@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOGC - Archivio Esami</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .exam-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .exam-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-main);
+            display: block;
+        }
+
+        .exam-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .exam-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--accent-blue);
+        }
+
+        .exam-card span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="page-header-title">Cyber Security Archivio</h1>
+        <span class="answer-badge answer-v">AOGC</span>
+    </header>
+
+    <main>
+        <div class="welcome-box">
+            <h2>Aspetti Gestionali e Organizzativi della Cyber Security</h2>
+            <p>
+                Raccolta degli appelli d'esame dell'Universita' degli Studi di Milano.
+                Clicca su uno dei riquadri sottostanti per visualizzare il testo d'esame
+                con risposte e motivazioni.
+            </p>
+        </div>
+
+        <h2>Appelli Disponibili</h2>
+
+        <div class="exam-grid">
+            <a href="2025_09_05.html" class="exam-card">
+                <h3>05 Settembre 2025</h3>
+                <span>Testo, Risposte e Motivazioni</span>
+            </a>
+
+            <a href="2024_06_21.html" class="exam-card">
+                <h3>21 Giugno 2024</h3>
+                <span>Testo, Risposte e Motivazioni</span>
+            </a>
+
+            
+        </div>
+    </main>
+
+</body>
+
+</html>
