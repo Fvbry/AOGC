@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOGC - 13 Ottobre 2023</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="page-header-title">13 Ottobre 2023</h1>
+        <a href="index.html" class="nav-btn">Torna alla Home</a>
+    </header>
+    <main>
+        <div class="toc">
+            <h3>Indice dell'Esame</h3>
+            <ul>
+                <li><strong>Reti e Protocolli di Comunicazione</strong>
+                    <ul>
+                        <li><a href="#q1">1. Trasmissione telefonica cablata</a></li>
+                        <li><a href="#q2">2. Il Routing</a></li>
+                        <li><a href="#q3">3. Un indirizzo IPv4</a></li>
+                        <li><a href="#q4">4. L'Uniform Resource Locator (URL)</a></li>
+                        <li><a href="#q5">5. Minaccia alla sicurezza informatica</a></li>
+                        <li><a href="#q6">6. Livello ISO/OSI di Collegamento (2)</a></li>
+                        <li><a href="#q7">7. Il Firewall</a></li>
+                        <li><a href="#q8">8. Topologia di rete ad Anello</a></li>
+                        <li><a href="#q9">9. La rete MAN</a></li>
+                    </ul>
+                </li>
+                <li><strong>Azienda e Sicurezza OT</strong>
+                    <ul>
+                        <li><a href="#q10">10. Mitigare i danni su linea produttiva</a></li>
+                        <li><a href="#q11">11. Incidente informatico interno</a></li>
+                        <li><a href="#q12">12. Operazioni Soggettive</a></li>
+                        <li><a href="#q13">13. L'Organigramma</a></li>
+                        <li><a href="#q14">14. Mansioni, Ruoli e Posizioni</a></li>
+                    </ul>
+                </li>
+                <li><strong>Sicurezza Informatica: Processi e Standard</strong>
+                    <ul>
+                        <li><a href="#q15">15. Processi di Cyber Security</a></li>
+                        <li><a href="#q16">16. Il SOC</a></li>
+                        <li><a href="#q17">17. Modellizzazione dei processi aziendali</a></li>
+                        <li><a href="#q18">18. Tipologie di Modellizzazione</a></li>
+                        <li><a href="#q19">19. Standard Operating Procedure (SOP)</a></li>
+                        <li><a href="#q20">20. Revisione 2022 di ISO 27001</a></li>
+                        <li><a href="#q21">21. Controllo "Data leakage prevention"</a></li>
+                        <li><a href="#q22">22. NIST CSF vs ISO 27001</a></li>
+                    </ul>
+                </li>
+                <li><strong>Normativa, Privacy e Compliance</strong>
+                    <ul>
+                        <li><a href="#q23">23. Origini legislative Privacy in Italia</a></li>
+                        <li><a href="#q24">24. Attuali leggi italiane sulla privacy</a></li>
+                        <li><a href="#q25">25. Il Patent Infringement</a></li>
+                        <li><a href="#q26">26. Direttiva NIS2 vs NIS1</a></li>
+                        <li><a href="#q27">27. Funzioni del CSIRT Nazionale</a></li>
+                        <li><a href="#q28">28. DSP secondo la Direttiva NIS</a></li>
+                        <li><a href="#q29">29. Il principio di "Accountability" (GDPR)</a></li>
+                        <li><a href="#q30">30. Requisiti ISO 27001 per fase PLAN</a></li>
+                    </ul>
+                </li>
+                <li><strong>Esercizi Pratici</strong>
+                    <ul>
+                        <li><a href="#ex1">Esercizio 1: Subnetting su LAN (512 indirizzi)</a></li>
+                        <li><a href="#ex2">Esercizio 2: ISO 27001 - Configuration Management</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Reti e Protocolli di Comunicazione</h2>
+
+        <div class="question-block" id="q1">
+            <h4 class="question-title">1. La trasmissione telefonica su rete cablata</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È tecnicamente più complessa rispetto alla trasmissione telegrafica perché deve trasmettere la voce umana</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Necessita della modulazione (trasformazione) del segnale da trasmettere</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Attraverso la modulazione in frequenza si adatta alla banda di frequenze che possono essere trasmesse sul canale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Dall'inizio ha permesso il collegamento di tutti gli utenti in rete senza l'intervento umano</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Ha utilizzato dall'inizio un sistema di commutazione automatica con selettore a disco</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Ha utilizzato dapprima la commutazione automatica solamente per le chiamate locali</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Trasmettere le frequenze vocali continue richiede tecniche di modulazione complesse rispetto agli impulsi telegrafici. All'inizio la commutazione era esclusivamente manuale (centraliniste), passando poi all'automatica a disco prima solo per le tratte locali (urbane).
+            </div>
+        </div>
+
+        <div class="question-block" id="q2">
+            <h4 class="question-title">2. Il Routing</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Il Routing è l'instradamento effettuato tra reti differenti con l'ausilio delle tabelle di instradamento</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. È l'instradamento effettuato all'interno della stessa rete con l'ausilio delle tabelle sui vari Router</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Considera che i router siano a conoscenza degli indirizzi solo delle reti a cui sono direttamente collegati</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Considera che i router siano a conoscenza degli indirizzi delle reti a cui sono direttamente o indirettamente collegati</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Nella tabella viene scelta la regola che ha più bit in comune con l'indirizzo fornito</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Nella tabella viene scelta la prima regola che viene esaminata</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il routing invia dati tra subnet diverse (Livello 3). Un router "conosce" direttamente solo le reti connesse alle sue interfacce fisiche. Per instradare pacchetti adotta l'algoritmo del "Longest Prefix Match", scegliendo la regola col maggior numero di bit in comune con l'IP destinazione.
+            </div>
+        </div>
+
+        <div class="question-block" id="q3">
+            <h4 class="question-title">3. Un indirizzo IPv4</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Ha la dimensione di 32 bits, divisi in 4 gruppi da 8 bits</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Ha la dimensione di 32 bits, divisi in 8 gruppi da 4 bits</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Ha la dimensione di 128 bits, divisi in 8 gruppi da 16 bits</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Ha la dimensione di 256 bits, divisi in 8 gruppi da 32 bits</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Può essere pubblico, raggiunto da qualsiasi nodo, o privato, riconosciuto solo all'interno della LAN</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Può essere assegnato da chiunque</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                IPv4 è un indirizzo a 32 bit (4 ottetti separati da punto). Gli indirizzi 128 bit appartengono all'IPv6. Gli IP pubblici su Internet sono regolamentati e assegnati gerarchicamente dall'ente IANA/RIR, non in modo casuale da chiunque.
+            </div>
+        </div>
+
+        <div class="question-block" id="q4">
+            <h4 class="question-title">4. L'Uniform Resource Locator (URL)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. È una sequenza di caratteri esclusivamente alfanumerici</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Identifica univocamente gli indirizzi delle risorse come documenti, immagini, video</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Può utilizzare protocolli http, https, ftp o mms</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Si avvale del DNS (Domain Name System) per "risolvere" l'URL in indirizzo IP</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Nel caso utilizzi il protocollo https realizza una comunicazione client server non criptata</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'URL non è esclusivamente alfanumerico (include simboli come /, ?, =, &, :). La sigla HTTPS sta per HTTP "Secure" e indica nativamente una trasmissione criptata su protocollo TLS/SSL.
+            </div>
+        </div>
+
+        <div class="question-block" id="q5">
+            <h4 class="question-title">5. Una Minaccia alla sicurezza informatica</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può essere definita come un codice eseguibile che ha la capacità di compiere operazioni dannose</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Si propaga e si concretizza sempre indipendentemente dal fattore umano</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Utilizza un vettore che può essere esterno o interno all'organizzazione, anche incidentale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Può essere eliminata mediante l'installazione di un buon antivirus</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Può penetrare qualsiasi file eseguibile e diffondersi quando viene copiato e inviato da un utente</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Può essere costituita dai Ransomware</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Le minacce odierne (come ransomware o attacchi 0-day) superano agilmente la barriera del semplice Antivirus e spesso dipendono pesantemente dal fattore umano (phishing, social engineering) per avviare il contagio e aggirare i controlli perimetrali.
+            </div>
+        </div>
+
+        <div class="question-block" id="q6">
+            <h4 class="question-title">6. Quali delle seguenti funzioni appartengono al livello ISO/OSI di Collegamento (2)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Identificazione dei nodi connessi</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Controllo degli errori</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Correzione degli errori mediante ritrasmissione</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Indirizzamento logico</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Incapsulamento del Pacchetto</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Gestione delle connessioni</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il livello 2 (Datalink) gestisce l'indirizzamento fisico (MAC address) e il "controllo" degli errori sul frame (FCS). Tuttavia, la "correzione" via ritrasmissione, l'indirizzamento logico (IP) e la gestione connessione appartengono ai livelli superiori (3 - Rete, 4 - Trasporto).
+            </div>
+        </div>
+
+        <div class="question-block" id="q7">
+            <h4 class="question-title">7. Il Firewall</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può includere funzionalità di Routing</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Può essere un dispositivo hardware o un software</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Più recenti possono funzionare a livello Applicazione ed avere caratteristiche adattative</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Può utilizzare il criterio "Default-Deny" ovvero bloccare solo ciò che viene vietato esplicitamente</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. È un dispositivo che funziona solo a livello di Collegamento dello stack ISO/OSI</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Utilizza generalmente per le regole: indirizzo IP sorgente, IP destinazione e la porta del servizio</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Un firewall di rete opera ai livelli 3 e 4 (non al L2). I moderni NGFW (Next Gen Firewall) arrivano fino al livello 7 (Applicazione). La regola "Default-Deny" significa bloccare *tutto* tranne ciò che è esplicitamente permesso (l'opposto della definizione in domanda 4).
+            </div>
+        </div>
+
+        <div class="question-block" id="q8">
+            <h4 class="question-title">8. In una topologia di rete ad Anello</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. L'informazione trasmessa può viaggiare in entrambi i versi/sensi dell'anello per raggiungere la destinazione</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. È necessario un nodo centrale per gestire la connessione tra i computer</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. È possibile ottimizzare l'utilizzo della banda disponibile inviando alcuni pacchetti in un verso e altri nell'opposto</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Le caratteristiche di scalabilità sono scarse dato che l'aggiunta di un nodo presuppone una variazione della rete</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Sono presenti caratteristiche intrinseche di ridondanza e quindi di affidabilità e robustezza</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Sono presenti un numero di rami pari al numero dei nodi meno uno</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La topologia ad anello chiude il circuito su se stesso (numero rami = numero nodi, non N-1). Nei sistemi industriali o in standard come FDDI l'anello è doppio/bidirezionale e ridondante, ma non necessita di un nodo "centrale" come nella topologia a Stella.
+            </div>
+        </div>
+
+        <div class="question-block" id="q9">
+            <h4 class="question-title">9. La rete MAN (Metropolitan Area Network)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una rete di telecomunicazione a banda stretta, che collega più LAN geograficamente vicine</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>2. È di solito utilizzata da singole filiali di un'azienda che vengono connesse ad una MAN tramite linee dedicate</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Utilizza connessioni in fibra ottica, che consentono prestazioni migliori</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Ha una velocità di trasferimento tra nodi distanti molto più lenta della comunicazione interna di una LAN</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Ha un'infrastruttura messa a disposizione da provider che operano a livello internazionale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. A livello cittadino si collega a reti sovraregionali e internazionali (Wide Area Network - WAN)</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Le reti MAN sono tipicamente "banda larga" (non stretta) e strutturate in fibra ottica ad alte prestazioni per le aree metropolitane. Non sono intrinsecamente "molto più lente" di una LAN, spesso offrono link Gigabit dedicati tra sedi cittadine.
+            </div>
+        </div>
+
+        <h2>Azienda e Sicurezza OT</h2>
+
+        <div class="question-block" id="q10">
+            <h4 class="question-title">10. Quali strategie posso utilizzare per mitigare danni da un attacco cyber ad una linea produttiva?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Ridondare e rendere indipendenti le architetture di rete e i dispositivi informatici che gestiscono la linea</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Realizzare un adeguato sistema di segmentazione e segregazione delle reti e degli apparati di controllo</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Aumentare gli stock delle materie prime</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Controllare strettamente e monitorare gli accessi logici diretti ai sistemi di produzione dall'esterno</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Aumentare considerevolmente la quantità di prodotti finiti in magazzino</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Scollegare fisicamente e isolare la rete industriale di produzione dalla rete office</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Aumentare i magazzini è un costo logistico, non una mitigazione di Cybersecurity. Isolamento totale (Air-Gap) tra rete IT e OT oggi è anacronistico e impedisce i moderni processi industriali (Industria 4.0), per questo la mitigazione vera si fa tramite segmentazione logica (VLAN, DMZ, Firewall).
+            </div>
+        </div>
+
+        <div class="question-block" id="q11">
+            <h4 class="question-title">11. Un incidente informatico interno all'organizzazione</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può essere qualsiasi evento che sottintende una violazione delle politiche di sicurezza IT fonte di danno</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Può essere un incidente collegato ad un attacco con obiettivi economici (sistemi Amministrativi o progettazione)</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. In ogni caso è di rilevanza inferiore rispetto ad un attacco diretto</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Può essere collegato ad un attacco avente come obiettivo l'interruzione del servizio (blocco sistemi o produzione)</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Ha come caratteristica la facilità di verifica del nesso causa-effetto tra evento rilevato e danno subito</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Può essere un evento casuale legato ad un'operazione o una procedura errata</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Un incidente interno (insider threat, volontario o accidentale) può essere devastante quanto un attacco esterno (spesso di più, avendo già privilegi elevati). Determinare con certezza il nesso causa-effetto richiede analisi forensi complesse, non è un'attività "facile".
+            </div>
+        </div>
+
+        <div class="question-block" id="q12">
+            <h4 class="question-title">12. Nella Gestione Aziendale le Operazioni Soggettive possono essere:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Reperimento di mezzi finanziari</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>2. Attività decisionali</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Investimenti</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Attività di controllo</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Attività di produzione</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Disinvestimento</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Le "operazioni soggettive" indicano il ruolo della governance: pianificare, decidere e controllare. La produzione fisica, reperire capitali, investire o disinvestire sono considerate materialmente "operazioni oggettive" del ciclo produttivo ed economico.
+            </div>
+        </div>
+
+        <div class="question-block" id="q13">
+            <h4 class="question-title">13. L'Organigramma</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È la rappresentazione grafica della struttura di una organizzazione</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Rappresenta i legami funzionali e gerarchici che tengono unite le persone</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Rappresenta solamente i legami funzionali che tengono unite le persone</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Può essere di tipo Funzionale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Può essere di tipo Bottom Up</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Può essere Divisionale</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'organigramma mostra sia i legami gerarchici (chi risponde a chi) sia quelli funzionali aziendali, assumendo forme come "Funzionale", "Divisionale" o "A Matrice". Non esiste un organigramma strutturalmente classificato come "Bottom Up".
+            </div>
+        </div>
+
+        <div class="question-block" id="q14">
+            <h4 class="question-title">14. In ogni Organizzazione</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. La Mansione deve essere assegnata a ogni individuo</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Una Mansione specifica può non essere associata ad un individuo</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Il Ruolo è l'insieme dei comportamenti previsti da una specifica figura professionale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. La Posizione è lo stato o il grado assegnato ad una figura professionale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Ad ogni risorsa vanno assegnate delle responsabilità per raggiungere obiettivi aziendali</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Le stesse mansioni i ruoli e posizioni possono essere attribuite a più persone contemporaneamente</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Mentre i "ruoli" e "mansioni" possono essere uguali (es. più sviluppatori software), la "Posizione" nell'organigramma è univoca: due persone non possono occupare esattamente lo stesso punto fisico e gerarchico dell'organigramma aziendale allo stesso momento (la 6 è falsa).
+            </div>
+        </div>
+
+        <h2>Sicurezza Informatica: Processi e Standard</h2>
+
+        <div class="question-block" id="q15">
+            <h4 class="question-title">15. Quali dei seguenti sono i principali processi di Cyber Security</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Monitoraggio degli Incidenti Informatici</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Gestione delle performance di rete</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Gestione degli incidenti informatici</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Gestione delle vulnerabilità</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Gestione delle obsolescenze</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Gestione delle risorse</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Vulnerability Management, Incident Management ed EOL (obsolescenze) sono processi di sicurezza puri. La "gestione delle performance" e la "gestione risorse" (HW/Umane) sono processi standard di IT Service Management (es. ITIL), non di sola Cyber Security.
+            </div>
+        </div>
+
+        <div class="question-block" id="q16">
+            <h4 class="question-title">16. Il SOC</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una tecnologia informatica</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>2. È il Security Organization Center</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. È un centro da cui vengono forniti servizi finalizzati alla sicurezza dei sistemi informativi aziendali</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Può essere solo interno all'organizzazione</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Può anche fornire servizi di Incident Response, come CSIRT</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Può anche fornire servizi di Incident Response in caso di Emergenza, come CERT</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Security Operations Center (SOC) non è un software ma un'unità complessa composta da persone, processi e tecnologie. Spesso viene esternalizzato (MSSP) e, oltre al monitoraggio, funge da braccio operativo in caso di Incident Response come CERT o CSIRT.
+            </div>
+        </div>
+
+        <div class="question-block" id="q17">
+            <h4 class="question-title">17. Perché bisogna modellare (modellizzare) i processi aziendali?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Per fornire una descrizione di una sequenza di attività comprensibile ad un osservatore esterno</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Perché la legislazione lo richiede obbligatoriamente</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Per usare un modello grafico standardizzato comprensibile ad organizzazioni differenti</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Per descrivere cosa attualmente succede durante un processo</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Per descrivere anche cosa si desidererebbe far succedere durante un processo in futuro</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Per creare la base e i presupposti all'analisi per l'innovazione di processo</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Mappare i processi descrive lo stato dell'arte ("As-Is") per poterlo evolvere in modo più efficiente in futuro ("To-Be"). Non esiste però alcuna legislazione universale che obblighi le aziende a "disegnare modelli grafici" dei loro processi aziendali (la 2 è falsa).
+            </div>
+        </div>
+
+        <div class="question-block" id="q18">
+            <h4 class="question-title">18. Quali sono le principali tipologie di Modellizzazione dei Processi?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Basate sui dati</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Basate sulle attività</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Basata sulle informazioni</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Basata sulle transizioni</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. Basata sui messaggi</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Basata sulla comunicazione</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                I modelli di rappresentazione si basano classicamente su "Attività" (es. Flowchart, WIDE), "Dati" (Data Flow Diagram - DFD) e "Comunicazione/Negoziazione" (Action Workflow). Le diciture "messaggi" e "transizioni" non sono macro-tipologie di Business Process Modeling.
+            </div>
+        </div>
+
+        <div class="question-block" id="q19">
+            <h4 class="question-title">19. Perché le SOP (Standard Operating Procedure) sono importanti?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Aiutano l'organizzazione a soddisfare gli standard di conformità</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Supportano ma non garantiscono che le attività non abbiano impatti ambientali negativi</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Semplificano e massimizzano la produzione/output</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Stabiliscono degli standard di sicurezza (fisica e logica)</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Supportano la formazione e la crescita professionale del personale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Garantiscono sempre risultati coerenti</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Le SOP offrono una linea guida per non commettere errori di default, aiutando la conformità (es. ISO 9001). Purtroppo non "garantiscono magicamente" i risultati in caso di fattori umani (la 6 è falsa) né assicurano autonomamente l'impatto ambientale zero (la 2 è ritenuta Falsa dal testo).
+            </div>
+        </div>
+
+        <div class="question-block" id="q20">
+            <h4 class="question-title">20. Nella revisione 2022 di ISO 27001</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Compare per la prima volta la parola Cybersecurity nel titolo</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Il numero dei controlli è inferiore rispetto alla versione precedente del 2013</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Molti controlli sono stati accorpati e non ne sono stati introdotti di nuovi</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Molti controlli sono rimasti invariati</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Un certo numero di controlli è stato semplicemente rinominato</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Un certo numero di controlli è completamente nuovo</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'aggiornamento 2022 ha accorpato il catalogo scendendo da 114 a 93 controlli, MA ha anche introdotto 11 controlli *completamente nuovi* (es. Threat Intelligence, Cloud security, Data Masking) rendendo la 3 un'affermazione falsa.
+            </div>
+        </div>
+
+        <div class="question-block" id="q21">
+            <h4 class="question-title">21. Il nuovo Controllo ISO 27001 Rev. 2022 "Data leakage prevention"</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Indica che le misure di prevenzione si applicano ai sistemi che trattano info sensibili</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Si applica ai soli sistemi abilitati al trattamento dei dati di terzi</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. È stato pensato, insieme ad altri nuovi controlli, in funzione della normativa GDPR</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. È un controllo solo di tipo "Preventivo"</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. È un controllo di tipo "Preventivo" e "Investigativo"</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. È un controllo solo di tipo "Correttivo"</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                I sistemi DLP non si applicano solo ai dati di "terzi" (clienti), ma bloccano l'esfiltrazione della PI (Proprietà Intellettuale) aziendale e del know-how verso l'esterno. Il controllo non previene soltanto, ma investiga il traffico (ispezione file/mail in uscita).
+            </div>
+        </div>
+
+        <div class="question-block" id="q22">
+            <h4 class="question-title">22. Quali sono le differenze tra NIST Cyber Security Framework e ISO 27001</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. NIST creato per gestione rischio sulle info, ISO 27001 per mantenimento di un ISMS</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>2. ISO 27001 è volontario, mentre il NIST CSF prevede la certificazione</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. ISO 27001 è uno standard più rigido e prescrittivo del NIST, che ha natura volontaria</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. La ISO 27001 è meno tecnica, con maggiore enfasi sulla gestione basata sul rischio</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. La ISO 27001 è più tecnica, con minore enfasi sulla gestione basata sul rischio</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. ISO 27001 è adatta ad org. mature, mentre il NIST per fasi iniziali dello sviluppo del programma</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'ISO 27001 è un sistema certificabile basato sul Risk Management (SGSI). Il NIST non si certifica formalmente ed è stato creato inizialmente per proteggere l'infrastruttura critica americana; è outcome-based (funzionale per obiettivi), rendendolo più flessibile.
+            </div>
+        </div>
+
+        <h2>Normativa, Privacy e Compliance</h2>
+
+        <div class="question-block" id="q23">
+            <h4 class="question-title">23. Quali sono le origini legislative del diritto alla privacy italiano?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. La Costituzione Italiana (articoli su domicilio, segretezza corrispondenza e manifestazione pensiero)</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. La Costituzione Italiana con l'articolo che incorpora la privacy nei diritti inviolabili dell'uomo</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. La prima sentenza della Corte di Cassazione degli anni '50 sul "caso del tenore Enrico Caruso"</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Identificava il diritto alla privacy solamente se verificatesi entro il domicilio domestico</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>5. La prima legge italiana (675/96) come attuazione della direttiva europea della metà anni '90</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. La prima legge italiana di tutela come attuazione del vecchio regolamento europeo</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La Legge 675 del 1996 fu la prima legge sulla privacy in Italia e recepì una *Direttiva* Europea, non un Regolamento. Il fondamento giuridico era l'Art. 2 della Costituzione sui diritti inviolabili.
+            </div>
+        </div>
+
+        <div class="question-block" id="q24">
+            <h4 class="question-title">24. Quali sono le attuali leggi italiane sulla privacy?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Il "Codice in materia di protezione dei dati personali" detto anche "Testo unico sulla Privacy"</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Il Codice anche detto "Codice della Privacy"</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Il Codice "Tutela delle persone e di altri soggetti rispetto al trattamento" del 1996</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Il GDPR attraverso i relativi D.M. e D.L. di adeguamento</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. La Direttiva europea "Relativa alla tutela delle persone fisiche..."</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Il decreto-legge con le disposizioni che abrogano la vecchia direttiva europea</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                In Italia vige il GDPR 2016/679 (Regolamento UE) integrato dal D.Lgs. 101/2018 che ha modificato l'antico "Codice Privacy" (D.Lgs. 196/2003). La legge del 1996 e le vecchie direttive UE sono ormai storiche e abrogate.
+            </div>
+        </div>
+
+        <div class="question-block" id="q25">
+            <h4 class="question-title">25. Il Patent Infringement</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È inteso come la violazione dei diritti di proprietà intellettuale o di brevetto</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Per la legge italiana è assimilato al reato di furto</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Per la legge italiana è assimilato al reato di contraffazione</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. È in costante aumento grazie al grande sviluppo dell'e-commerce</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Riguarda beni di lusso e griffati, alimentari, farmaci</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Anche se non arreca un enorme danno economico è comunque un fenomeno sotto osservazione</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Violar un brevetto rientra nel reato di contraffazione, e causa miliardi di danni economici ogni anno (specie su piattaforme online). Non è tecnicamente inquadrabile come semplice reato di "furto" (sottrazione di un oggetto fisico altrui).
+            </div>
+        </div>
+
+        <div class="question-block" id="q26">
+            <h4 class="question-title">26. NIS2 (Network and Information Security) rispetto alla prima direttiva NIS:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Elimina la distinzione tra servizi essenziali e digitali, classificando in "essenziali" o "importanti"</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Prevede che le nuove categorie siano sottoposte ad adempimenti differenti</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Come direttiva entrerà direttamente in forza senza il recepimento da parte dei singoli stati</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Amplia l'ambito di applicazione comprendendo più settori (es. farmaceutici, P.A.)</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Prevede il nuovo obiettivo di rafforzare la sicurezza informatica nella Supply Chain</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Si prefigge di restringere il numero delle aziende coinvolte dalla normativa</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                A differenza dei "Regolamenti" europei, ogni "Direttiva" (come la NIS2) richiede obbligatoriamente un decreto legislativo nazionale per entrare in vigore. La NIS2 *allarga* pesantemente la platea delle aziende obbligate ad adeguarsi, non la restringe.
+            </div>
+        </div>
+
+        <div class="question-block" id="q27">
+            <h4 class="question-title">27. Quali delle seguenti sono funzioni del CSIRT (Computer Security Incident Response Team) nazionale?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Il monitoraggio degli incidenti a livello nazionale ed internazionale</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>2. L'emissione di preallarmi, allerte, annunci e divulgazione di informazioni in merito a rischi</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. La delega dell'attività di intervento in caso di incidente</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. L'analisi dinamica dei rischi e degli incidenti</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. La sensibilizzazione situazionale</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. La partecipazione alla rete europea dei CSIRT</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il CSIRT ha un ruolo prettamente reattivo e operativo a livello nazionale per incidenti attivi (early warning, situational awareness, analisi log). L'ispezione/monitoraggio internazionale a lungo termine compete ad altri enti di intelligence strategica. Non si occupa di "delegare" gli interventi.
+            </div>
+        </div>
+
+        <div class="question-block" id="q28">
+            <h4 class="question-title">28. Chi sono i DSP (Digital Service Providers) secondo la Direttiva NIS nella prima versione?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Cloud Computing Services</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Cloud Virtual Machines</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Online Marketplaces</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Online Search Engines</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Online products e-commerce</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Online people recruitments</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il testo normativo della prima NIS identificava tre esatte macro-categorie per i DSP: 1) Servizi Cloud, 2) Motori di ricerca online (es. Google), 3) Mercati online / Marketplace (es. Amazon/eBay). I portali specifici (vendita scarpe, assunzioni, HR) non ne facevano parte.
+            </div>
+        </div>
+
+        <div class="question-block" id="q29">
+            <h4 class="question-title">29. Il principio di "Accountability" del GDPR</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un concetto che può essere tradotto in italiano come responsabilizzazione/rendicontazione</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. È un concetto che può essere tradotto in italiano come contabilità</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>3. Dispone che il titolare adotti politiche a garantire che il trattamento sia conforme allo stesso</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>4. Prevede l'adozione di comportamenti proattivi e l'adozione di misure finalizzate ad assicurare</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Prevede l'adozione di criteri di "data protection by default and by design" indipendente dall'autorizzazione</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>6. Dispone che il titolare adotti politiche a garantire ed essere in grado di dimostrare la conformità</span><span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La traduzione "Contabilità" è errata in senso normativo. L'Accountability non richiede solo che il Titolare "garantisca" la privacy passivamente, ma richiede una partecipazione attiva: il Titolare deve essere sempre **in grado di dimostrare proattivamente** la sua conformità (documentazione, registri).
+            </div>
+        </div>
+
+        <div class="question-block" id="q30">
+            <h4 class="question-title">30. Quali dei seguenti requisiti ISO 27001 possono rappresentare la fase PLAN del ciclo PDCA</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Contesto</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>2. Leadership</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>3. Pianificazione</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>4. Supporto</span><span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>5. Attività Operative</span><span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>6. Valutazione delle Prestazioni</span><span class="answer-badge answer-f">F</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nello standard ISO 27001, la fase PLAN (Pianificazione) raggruppa le Clausole dalla 4 alla 7: Contesto, Leadership, Pianificazione e Supporto. La clausola "Attività Operative" corrisponde al DO (Esecuzione) e la "Valutazione Prestazioni" al CHECK (Controllo).
+            </div>
+        </div>
+
+        <h2>Esercizi Pratici</h2>
+
+        <div class="question-block" id="ex1">
+            <h4 class="question-title">Esercizio 1: Subnetting su LAN (512 indirizzi)</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> È rappresentata una LAN aziendale con un blocco IP da allocare su 3 Subnet gestite tramite un router. Completare la tabella ricavando i dati richiesti a partire dagli indizi.
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; width:40%;">Parametro Richiesto</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Risultato</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo di Rete Principale (CIDR)</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>135.124.20.0/23</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo di Broadcast</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>135.124.21.255</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo di Maschera di Rete</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>255.255.254.0</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo Subnet 1 (128 indirizzi totali)</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>135.124.20.0/25</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo Subnet 2</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; color:var(--false-color);"><strong>Non è possibile definire una subnet con 254 indirizzi disponibili a partire dall'indirizzo 135.124.20.129</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo Subnet 3</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>135.124.21.128/25</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Nome del Dispositivo azzurro</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>Router</strong></td>
+                </tr>
+            </table>
+            <div class="motivazione" style="margin-top:1rem;">
+                <strong>Soluzione Esercizio:</strong>
+                Una subnet /23 fornisce esattamente 512 indirizzi (2 bit nell'ottetto host). La Subnet 2 richiesta dal grafico doveva ospitare /24 host (254 utilizzabili), ma una /24 deve matematicamente iniziare da un blocco pari (es. .20.0 o .21.0), non può partire dal byte dispari .20.129 generato dallo switch precedente.
+            </div>
+        </div>
+
+        <div class="question-block" id="ex2">
+            <h4 class="question-title">Esercizio 2: ISO 27001 - Configuration Management</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> Analizzando il Controllo ISO 27001 Rev. 2022 "Gestione della Configurazione" tracciare una X sulle affermazioni ritenute corrette.
+            </div>
+            <ul class="solution-list">
+                <li class="solution-item"><span>A tutte le configurazioni, comprese quelle di sicurezza, hardware, software, servizi e reti.</span> <span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>Alle sole configurazioni di sicurezza, di hardware, software, servizi e reti.</span> <span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>Alle sole configurazioni del software che devono essere stabilite, documentate, e monitorate.</span> <span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>Il controllo è di tipo: Preventivo</span> <span class="answer-badge answer-v">V</span></li>
+                <li class="solution-item"><span>Il controllo è di tipo: Investigativo</span> <span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>Il controllo è di tipo: Correttivo</span> <span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>Il controllo è di natura: Organizzativa</span> <span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>Il controllo è di natura: Fisica</span> <span class="answer-badge answer-f">F</span></li>
+                <li class="solution-item"><span>Il controllo è di natura: Tecnologica</span> <span class="answer-badge answer-v">V</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Soluzione Esercizio:</strong>
+                La clausola "Configuration Management" è omnicomprensiva: si applica a *tutta* l'infrastruttura di rete e sistemi, e non va limitata solo a "sicurezza" o "solo software". Viene classificata come controllo "Preventivo" (ferma i problemi prima che nascano a causa di settaggi errati) e "Tecnologico".
+            </div>
+        </div>
+
+    </main>
+    <button id="back-to-top">↑</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

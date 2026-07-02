@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOGC - 23 Febbraio 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="page-header-title">23 Febbraio 2024</h1>
+        <a href="index.html" class="nav-btn">Torna alla Home</a>
+    </header>
+    <main>
+        <div class="toc">
+            <h3>Indice dell'Esame</h3>
+            <ul>
+                <li><strong>Protocolli e Infrastrutture di Rete</strong>
+                    <ul>
+                        <li><a href="#q1">1. Protocolli di comunicazione</a></li>
+                        <li><a href="#q2">2. L'interfaccia USB</a></li>
+                        <li><a href="#q3">3. Fibra ottica WDM</a></li>
+                        <li><a href="#q4">4. Dominio di Collisione Ethernet</a></li>
+                        <li><a href="#q5">5. La convergenza funzionale</a></li>
+                        <li><a href="#q6">6. Il Router</a></li>
+                    </ul>
+                </li>
+                <li><strong>Azienda, Processi e Sicurezza</strong>
+                    <ul>
+                        <li><a href="#q7">7. Beni di consumo e beni strumentali</a></li>
+                        <li><a href="#q8">8. Il Soggetto Giuridico</a></li>
+                        <li><a href="#q9">9. Settore terziario</a></li>
+                        <li><a href="#q10">10. Sistemi R&D e valore aziendale</a></li>
+                        <li><a href="#q11">11. Sistema di Gestione aziendale</a></li>
+                        <li><a href="#q12">12. L'Evento di Sicurezza Informatica</a></li>
+                        <li><a href="#q13">13. La Standardizzazione</a></li>
+                    </ul>
+                </li>
+                <li><strong>Standard e Framework (ISO 27001, NIST, IEC 62443)</strong>
+                    <ul>
+                        <li><a href="#q14">14. Standard ISO/IEC 27000-series</a></li>
+                        <li><a href="#q15">15. ISO 27001 - Leadership</a></li>
+                        <li><a href="#q16">16. ISO 27001 - Pianificazione</a></li>
+                        <li><a href="#q17">17. I Controlli ISO/IEC 27001</a></li>
+                        <li><a href="#q18">18. Aree di Controllo (ISO 27001:2013)</a></li>
+                        <li><a href="#q19">19. NIST Cybersecurity Framework</a></li>
+                        <li><a href="#q20">20. Livelli di implementazione NIST (Tier)</a></li>
+                        <li><a href="#q21">21. NIST CSF - Supply Chain Risk Management</a></li>
+                        <li><a href="#q22">22. La serie ISA/IEC 62443</a></li>
+                        <li><a href="#q23">23. Le zone secondo ISA/IEC 62443</a></li>
+                    </ul>
+                </li>
+                <li><strong>Privacy, Normative e Gestione del Rischio</strong>
+                    <ul>
+                        <li><a href="#q24">24. Il Diritto alla Privacy</a></li>
+                        <li><a href="#q25">25. La Brand Reputation</a></li>
+                        <li><a href="#q26">26. Direttiva NIS</a></li>
+                        <li><a href="#q27">27. Regolamento GDPR</a></li>
+                        <li><a href="#q28">28. Figure Codice della Privacy</a></li>
+                        <li><a href="#q29">29. Cybersecurity Act (Reg. 2019/881)</a></li>
+                        <li><a href="#q30">30. Il Risk Appetite</a></li>
+                    </ul>
+                </li>
+                <li><strong>Esercizi Pratici</strong>
+                    <ul>
+                        <li><a href="#ex1">Esercizio 1: Topologia di Rete</a></li>
+                        <li><a href="#ex2">Esercizio 2: Subnetting IPv4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Protocolli e Infrastrutture di Rete</h2>
+
+        <div class="question-block" id="q1">
+            <h4 class="question-title">1. I protocolli di comunicazione</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono un insieme di regole definite mediante specifiche sequenze di istruzioni standardizzate</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Possono essere raccolti in famiglie in base ai vari marchi commerciali</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Permettono la comunicazione tra due o più entità connesse</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Sono un insieme di regole che possono differenti nelle varie entità</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Possono essere uno standard con cui sono definiti sintassi, semantica e sincronizzazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Possono essere implementati con hardware o software o in combinazione</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> I protocolli di rete sono standard aperti e universali (non proprietari di un singolo marchio) e, per funzionare, devono essere identici tra trasmettitore e ricevitore (non possono essere differenti tra le entità)[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q2">
+            <h4 class="question-title">2. L'interfaccia USB</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può raggiungere una velocità di trasmissione di 20Gbit/sec</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È utilizzata principalmente come interfaccia punto-punto</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Può gestire al massimo 10 Hub concentratori</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Ha la capacità di alimentare i dispositivi collegati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Può trasmette sino ad una distanza non superiore ai 5 metri</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Può memorizzare sino a 100 Gbyte</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Lo standard USB supporta fino a 127 dispositivi tramite hub a cascata (non limitato a 10) ed è un protocollo di connessione/trasmissione, non una memoria di massa, quindi non ha senso parlare di limiti di immagazzinamento in Gbyte[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q3">
+            <h4 class="question-title">3. La modalità di trasmissione su canali in fibra ottica (WDM) è</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Una trasmissione bidirezionale simultanea su cavo singolo</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Una trasmissione bidirezionale non simultanea su cavo singolo</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Una modalità di trasmissione con fasci a lunghezza d'onda differente</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Una modalità di trasmissione con fasci di colori diversi ma con la stessa frequenza</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Una tecnica di trasmissione con multiplexing a divisione di ampiezza</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Una tecnica di trasmissione con multiplexing a divisione di lunghezza d'onda</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il Wavelength Division Multiplexing (WDM) moltiplica la capacità della fibra usando lunghezze d'onda (frequenze/colori) diverse simultaneamente[cite: 17]. "Colori diversi" implica fisicamente "frequenze diverse", rendendo falsa l'opzione 4[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q4">
+            <h4 class="question-title">4. Il Dominio di Collisione nella trasmissione Ethernet:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un insieme di nodi che concorrono per accedere allo stesso mezzo trasmissivo</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È una tecnica per ridurre la probabilità di collisioni all'interno di una LAN</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Una tecnica per evitare che il mezzo trasmissivo sia conteso tra tutte le stazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Una tecnica per eliminare completamente le collisioni all'interno di una LAN</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Una tecnica statistica per gestire le collisioni all'interno di una LAN</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. La suddivisione della rete in modo che la contesa avvenga solo nella singola sottorete</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> La creazione di domini di collisione riduce la probabilità di scontri fra pacchetti segregando il traffico, ma non elimina mai fisicamente e matematicamente al 100% le collisioni all'interno del singolo segmento di rete Ethernet condiviso[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q5">
+            <h4 class="question-title">5. La convergenza funzionale:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È la tendenza ad aumentare le funzionalità inglobando caratteristiche di altri dispositivi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È un fenomeno causato dalla forte concorrenza e dall'aumento delle prestazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. È un fenomeno che non ha impatto sulla standardizzazione degli specifici brand</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. È un fenomeno che ha portato all'obsolescenza di alcuni dispositivi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Ha portato alcuni switch a gestire funzioni di routing (livello 3 ISO/OSI)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Ha provocato l'obsolescenza degli switches di rete</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Gli switch non sono obsoleti, anzi, proprio grazie alla convergenza si sono evoluti in Switch Layer 3. La convergenza ha un forte impatto sui brand, forzandoli a standardizzare tecnologie multipiattaforma[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q6">
+            <h4 class="question-title">6. Il Router:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Gestisce il traffico trasmesso su mezzi trasmissivi differenti (fibra, doppino, wi-fi)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Attraverso l'instradamento (routing) connette dispositivi su reti differenti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Può funzionare solo a livello 2 dello stack ISO-OSI</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Funziona normalmente a livello 3 dello stack ISO-OSI</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Gestisce il traffico attraverso l'uso degli indirizzi IP</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Gestisce il traffico attraverso l'uso degli indirizzi MAC</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il router è il dispositivo principe del Livello 3 (Rete) e instrada i pacchetti analizzando gli IP logici. Il livello 2 e l'uso dei MAC address sono competenze prettamente degli switch[cite: 17].
+            </div>
+        </div>
+
+        <h2>Azienda, Processi e Sicurezza</h2>
+
+        <div class="question-block" id="q7">
+            <h4 class="question-title">7. Quali sono le differenze tra beni di consumo e beni strumentali?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. I beni di consumo vengono utilizzati direttamente per soddisfare un bisogno</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. I beni di consumo possono essere le materie prime trasformate per un prodotto finito</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Bene di consumo può essere il marchio di un determinato prodotto</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Bene di consumo può essere l'energia elettrica che alimenta il sistema informativo</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. I beni strumentali sono utilizzati per realizzare l'attività ma non costituiscono il prodotto</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. I beni strumentali possono essere parte costituente del prodotto o del servizio</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> I beni strumentali (macchinari, capannoni) servono per la produzione ma non entrano a far parte fisicamente del prodotto finale venduto[cite: 17]. Il marchio è un bene immateriale, non un bene di consumo[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q8">
+            <h4 class="question-title">8. Il Soggetto Giuridico</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È la persona nel cui nome l'attività aziendale è esercitata</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È la persona che assume solo gli obblighi derivanti dalle operazioni aziendali</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. È la persona alla quale sono riferiti i diritti e gli obblighi dell'azienda</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Può essere una Persona Giuridica ovvero un ente, un'azienda o una società</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Può essere solo la Persona Fisica nel cui nome l'attività aziendale è esercitata</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Può essere indifferentemente la Persona Fisica o Giuridica, entrambe hanno capacità giuridica</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il soggetto giuridico è titolare non solo degli obblighi, ma anche dei diritti[cite: 17]. Può benissimo essere una società (persona giuridica) e non è obbligatoriamente limitato a una singola persona fisica[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q9">
+            <h4 class="question-title">9. Le aziende nel settore terziario</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Possono realizzare attività di produzione indiretta di beni (commercio)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Possono realizzare attività di produzione diretta di beni</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Possono essere quelle attività complementari e di ausilio ai settori primario e secondario</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Possono realizzare produzione di servizi (bancarie, assicurative, ecc.)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Possono essere le aziende che gestiscono i trasporti e le comunicazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Possono basare il core business sul know-how e servizi intellettuali (R&D, consulenza)</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il settore terziario eroga servizi immateriali o si occupa della commercializzazione dei prodotti. La trasformazione o produzione fisica e diretta di beni materiali spetta al settore secondario[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q10">
+            <h4 class="question-title">10. Perché i sistemi di R&D (Ricerca & Sviluppo) rappresentano un valore da proteggere:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Perché sono molto onerosi da acquistare e da manutenere</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Perché possono racchiudere i dettagli delle proprietà intellettuali o dei brevetti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Perché possono racchiudere info sulle formulazioni, risultati di test e sperimentazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Perché racchiudono il know-how aziendale elaborato in anni di presenza sul mercato</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Perché possono essere oggetto di interesse da parte di competitor malintenzionati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Perché in caso di anomalia o blocco vi può essere un impatto sulla Business Continuity</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> L'R&D contiene il cuore della Proprietà Intellettuale, ma il suo blocco momentaneo non ferma la produzione operativa corrente (non ferma la fabbrica, non impatta la Business Continuity a breve termine)[cite: 17]. Il costo dell'hardware non è il vero valore da proteggere[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q11">
+            <h4 class="question-title">11. Il Sistema di Gestione aziendale</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono modelli organizzativi adottati su base volontaria mediante regole e procedure</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Sono regole fatte proprie solo dal top management per raggiungere obiettivi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Può tenere sotto controllo l'attività aziendale per soddisfare le esigenze del Cliente</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Può avere come obiettivo il miglioramento progressivo delle prestazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Non riguarda specificamente il controllo dei processi aziendali</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Può dimostrare a terzi (Organismi/Clienti) la capacità di mantenere impegni normativi</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> I sistemi di gestione permeano tutti i livelli aziendali (non solo il top management) e si basano esplicitamente sul controllo, sulla misurazione e sul miglioramento continuo dei processi operativi[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q12">
+            <h4 class="question-title">12. L'Evento di Sicurezza Informatica</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È qualsiasi situazione la cui rilevanza è significativa solo ai fini dell'infrastruttura HW</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Qualsiasi situazione che sottintenda una violazione delle politiche di sicurezza IT</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Qualsiasi situazione significativa ai fini delle attività di gestione, controllo e contenimento dei rischi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Evento a basso impatto: evento gestito in maniera silente dal sistema di sicurezza</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Evento a impatto significativo: non necessita di essere ulteriormente analizzato</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Evento a impatto critico: potrebbe sottintendere una violazione delle politiche di sicurezza</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Un "evento" è una qualsiasi occorrenza osservabile; diventa "incidente" (violazione delle policy) solo se ha un impatto negativo accertato (la 2 definisce un incidente, non un semplice evento). Un evento significativo richiede sempre analisi approfondite[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q13">
+            <h4 class="question-title">13. La Standardizzazione:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un'attività che dà origine a soluzioni codificate e ripetibili a problemi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Di solito non è orientata ad un ritorno economico e di immagine</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Costituisce il processo di definizione e implementazione degli standard</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Può riguardare tutte le attività aziendali, a partire da quelle più critiche</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Può essere applicata, con notevoli vantaggi, nell'area della sostenibilità ambientale</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Di solito non si applica nell'ambito della qualità per problematiche di costi</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> La standardizzazione è il pilastro della Qualità (ISO 9001) e porta enormi vantaggi in termini di ottimizzazione di costi e ritorno di immagine per l'azienda sul mercato[cite: 17].
+            </div>
+        </div>
+
+        <h2>Standard e Framework (ISO 27001, NIST, IEC 62443)</h2>
+
+        <div class="question-block" id="q14">
+            <h4 class="question-title">14. Lo standard ISO/IEC 27000-series</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una serie di norme internazionali relativo alla sicurezza informatica</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È uno standard monolitico costituito da un solo documento</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. È denominato "ISMS Family of Standards" e protegge le informazioni di un'organizzazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Permette di gestire la sicurezza per informazioni finanziarie, proprietà intellettuale e dati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Ha generato altri standard, tra cui il British Standard BS 7799-1 e-2</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Si focalizza sulla protezione dei dati unicamente attraverso il consolidamento tecnologico</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> È la ISO 27001 a derivare originariamente dal vecchio standard britannico BS 7799 (non viceversa)[cite: 17]. Lo standard è una famiglia di decine di norme e abbraccia l'ambito organizzativo e fisico, non esclusivamente quello tecnologico[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q15">
+            <h4 class="question-title">15. Nell'Area Tematica dei Requisiti ISO 27001 "Leadership"</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Si richiede che l'alta direzione debba dimostrare leadership per il SGSI</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Si richiede che l'alta direzione dimostri leadership per lo sviluppo del sistema informativo</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. L'alta direzione deve assicurare che siano disponibili le risorse necessarie per il SGSI</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. L'alta direzione deve stabilire una politica di sicurezza adeguata allo scopo dell'org.</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. L'alta direzione deve garantire che responsabilità e autorità per ruoli di sicurezza siano assegnate</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Le responsabilità per i ruoli di sicurezza vengono assegnate secondo criteri soggettivi</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> La Leadership si impegna a stanziare risorse per il Sistema di Gestione della Sicurezza (non per il sistema informatico IT generico) e adotta ruoli basati su competenze oggettive, mai su simpatie "soggettive"[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q16">
+            <h4 class="question-title">16. Nell'Area Tematica dei Requisiti ISO 27001 "Pianificazione"</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. L'organizzazione deve determinare rischi e opportunità affinché l'ISMS raggiunga i risultati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. L'organizzazione deve determinare rischi per prevenire/ridurre effetti indesiderati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. L'organizzazione deve affrontare rischi per mantenere almeno costante il livello di sicurezza</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. L'organizzazione definisce un processo di valutazione del rischio aggiornando i criteri</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Il processo di valutazione è indipendente, senza prendere in considerazione normative come il GDPR</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Il processo garantisce che ripetute valutazioni del rischio producano risultati coerenti e comparabili</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Lo scopo della pianificazione ISO 27001 è il miglioramento continuo, non il semplice mantenimento dello status quo (la 3 è falsa). Inoltre, l'analisi dei rischi *deve* obbligatoriamente tenere conto dei vincoli normativi legali come il GDPR[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q17">
+            <h4 class="question-title">17. I Controlli ISO/IEC 27001 (Allegato A)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono appropriate contromisure selezionate per affrontare i rischi cyber identificati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Come indicato nel documento 27002, sono strutturati secondo uno schema a 3 livelli</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Come indicato nel documento 27002, sono strutturati secondo uno schema a 2 livelli</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Sono 114 secondo l'edizione ISO/IEC 27001/2 2013</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Sono 116 secondo l'edizione ISO/IEC 27001/2 2016</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Sono 93 secondo l'edizione ISO/IEC 27002 2022</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Nella versione storica 2013 lo standard Annex A presentava 114 controlli raggruppati in 14 clausole[cite: 17]. Nel recente aggiornamento del 2022 il catalogo è stato sfoltito e razionalizzato a 93 controlli raggruppati in soli 4 macro-domini tematici[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q18">
+            <h4 class="question-title">18. Quali delle seguenti sono Aree di Controllo secondo ISO 27001 2013?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sicurezza logica e ambientale</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Sicurezza delle attività operative</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Sicurezza delle reti e dei sistemi di comunicazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Acquisizione, sviluppo e manutenzione dei sistemi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Gestione della catena di fornitura</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Gestione deli incidenti relativi alla sicurezza delle informazioni</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> I nomi esatti delle aree di controllo (domini) della 2013 includono la Sicurezza Fisica/Ambientale (non "logica e ambientale") e le "Relazioni coi fornitori" (non "Gestione della catena di fornitura", termine usato più nel NIST)[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q19">
+            <h4 class="question-title">19. Il NIST Cybersecurity Framework</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un insieme di linee guida per mitigare i rischi di sicurezza informatica organizzativa</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È stato pubblicato con obiettivo di creare uno standard equivalente alla ISO 27000</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. È composto da quattro parti: Core, Tiers, Profiles e Deployment</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Fornisce una tassonomia di alto livello dei risultati e una metodologia per gestirli</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Fornisce una tassonomia dettagliata (specifica e prescrittiva) dei controlli IT</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Permette orientamenti sulla protezione della privacy e libertà civili</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il NIST CSF non mira a "sostituire" l'ISO 27001 (anzi lo integra)[cite: 17]. È composto da tre (non 4) componenti base: Framework Core, Tiers e Profiles[cite: 17]. Non è prescrittivo né "dettagliato sui controlli" ma lavora per macro-risultati (outcomes)[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q20">
+            <h4 class="question-title">20. Nel NIST CSF i livelli di implementazione del framework ("Tier")</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Forniscono un contesto su come un'organizzazione considera il rischio informatico</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Descrivono il grado in cui le pratiche esibiscono le caratteristiche del Framework</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Caratterizzano le pratiche in un intervallo da Parziale (Tier 1) ad Adattativo (Tier 5)</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Riflettono una progressione da risposte informali (Tier 1) ad approcci agili (Tier 5)</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Considerano pratiche attuali, ambiente minacce, requisiti legali e obiettivi aziendali</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Valutano la Gestione Rischio, l'Integrazione del Programma e la Partecipazione esterna</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> I Tiers di maturità del NIST sono categorizzati su una scala che va da 1 a 4 (Partial, Risk Informed, Repeatable, Adaptive) e non arrivano fino al Tier 5[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q21">
+            <h4 class="question-title">21. Nel NIST CSF il Supply Chain Risk Management (SCRM)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Affronta sia l'effetto di sicurezza dell'org. sui partner, sia dei partner sull'organizzazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Può includere attività di determinazione dei requisiti di sicurezza per i fornitori</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Può includere l'attuazione dei requisiti di sicurezza attraverso accordi formali/contratti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. È l'insieme delle attività necessarie per gestire il rischio cyber associato a soggetti esterni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Verifica che i requisiti di sicurezza siano soddisfatti tramite valutazioni per i soggetti *interni*</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Può includere comunicazioni ai fornitori su convalida di requisiti di "qualità del prodotto"</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Lo SCRM è un concetto rivolto esclusivamente verso l'esterno dell'organizzazione per proteggere la filiera di approvvigionamento IT[cite: 17]. Riguarda parametri rigorosi di cybersecurity, non la "qualità del prodotto" (es. estetica o durabilità ISO 9001) in senso lato[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q22">
+            <h4 class="question-title">22. La serie ISA/IEC 62443</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Fornisce un quadro per mitigare vulnerabilità nei sistemi di controllo industriale (IACS)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Sono standard applicabili a tutti i settori industriali e alle infrastrutture critiche</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Ha un posizionamento che scende sino a livello dell'impianto</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Ha un posizionamento che parte dal coinvolgimento dell'amministratore delegato / CdA</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. È costituita da quattro famiglie di standard ancora in aggiornamento</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Non riguarda direttamente gli SCADA</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Lo standard IEC 62443 nasce esattamente per gestire la cybersecurity degli ambienti OT (Operational Technology) e dei sistemi SCADA[cite: 17]. Parte dall'ingegneria e dal livello impiantistico (Purdue Model), non è un modello guidato dal CdA aziendale[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q23">
+            <h4 class="question-title">23. Le zone secondo ISA/IEC 62443</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Dividono un'architettura fisica in zone omogenee raggruppando dispositivi HW per sicurezza</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Dividono un sistema in zone raggruppando le risorse (logiche o fisiche) con requisiti comuni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Hanno requisiti definiti da Security Level (SL), determinati dall'analisi del rischio</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Hanno confini che separano gli elementi all'interno della zona da quelli esterni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Possono includere impianti presenti in siti fisici differenti</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Possono essere suddivise in sottozone che definiscono diversi livelli di sicurezza</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Le "Zone" secondo lo standard industriale non sono solo muri hardware fisici, ma aggregazioni logiche o miste di asset per finalità e livello di rischio omogeneo[cite: 17]. Esse però mappano impianti circoscritti e locali (LAN), non sono distribuite su siti geografici differenti[cite: 17].
+            </div>
+        </div>
+
+        <h2>Privacy, Normative e Gestione del Rischio</h2>
+
+        <div class="question-block" id="q24">
+            <h4 class="question-title">24. Il Diritto alla Privacy</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Nasce negli Stati Uniti nel 1910 e viene elaborato in Italia dagli anni '60-'70</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Attualmente viene inteso solo nel senso di protezione dei dati personali</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. In origine era il "diritto a essere lasciato solo" da confrontarsi coi vincoli sociali</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. In origine significava poter fare i propri affari "senza confrontarsi con gli altri"</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Attualmente inteso non solo come dati personali ma come diritto a esprimere le aspirazioni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Nasce negli Stati Uniti nel 1890 dall'istituto "right to be let alone" e in Italia '60-'70</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il concetto giuridico nasce negli USA nel 1890 con l'articolo di Warren e Brandeis[cite: 17]. Oggi è un concetto espanso all'autodeterminazione e non è limitato solo al mero dato anagrafico (la 2 è falsa)[cite: 17]. Non significa però vivere in anarchia slegati dalla società (la 4 è falsa)[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q25">
+            <h4 class="question-title">25. La Brand Reputation</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Si riferisce al modo in cui il brand viene valutato da parte del pubblico</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Deve essere differenziata dalla Brand Image costruita dall'azienda in maniera strategica</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Si sovrappone al concetto di Brand Image</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Impatta direttamente l'immagine dell'azienda proprietaria del marchio</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Può non impattare direttamente l'immagine dell'azienda proprietaria del marchio</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Presuppone e dipende da "azioni concrete" che si prestano ad essere rendicontate</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> L'Immagine (Brand Image) è come l'azienda *vuole* apparire; la Reputazione è come le persone valutano e percepiscono *oggettivamente* l'operato dell'azienda[cite: 17]. Se il brand "B" (sotto-marchio) ha una crisi reputazionale, non è detto che la Corporate madre "A" ne esca ugualmente colpita[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q26">
+            <h4 class="question-title">26. La Direttiva NIS (Network and Information Security)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È il primo atto legislativo sulla sicurezza informatica approvato dall'Unione Europea</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È entrata in vigore il 6 luglio 2017</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Obiettivo di misure di sicurezza comuni definite successivamente a discrezione dei paesi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Impone la notifica obbligatoria degli incidenti all'Autorità nazionale</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Impone la nascita di CSIRT nazionali sulla base del CERT-UE</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Impone di realizzare un network nei singoli paesi che si occupi delle reti critiche</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Entrata in vigore nel 2016, la NIS obbliga i gestori di servizi critici (OES e DSP) a comunicare i data breach a istituzioni centralizzate europee standardizzate (CSIRT), non lasciando l'implementazione alla discrezione totale dei singoli paesi[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q27">
+            <h4 class="question-title">27. Il Regolamento (UE) 2016/679 GDPR</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un regolamento UE in materia di trattamento dei dati personali e di privacy</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Necessita di essere recepito dai singoli stati tramite provvedimenti legislativi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Ha come obiettivo primario la protezione dei residenti, solo all'interno dei confini UE</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Si applica al trattamento dei dati delle persone fisiche e ai dati conservati in "archivio"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Non si applica ad imprese con sede fuori dall'UE che trattano dati di residenti UE</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Il regolamento si occupa anche dei dati per attività di sicurezza nazionale e ordine pubblico</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> In quanto "Regolamento", il GDPR è immediatamente esecutivo in tutta l'UE (non serve una legge di recepimento come per le Direttive)[cite: 17]. Protegge il dato del cittadino europeo ovunque esso vada, imponendo le regole anche a corporazioni extra-UE (es. Google USA)[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q28">
+            <h4 class="question-title">28. Le Figure di Riferimento per il trattamento dei dati (Codice Privacy)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Titolare del trattamento</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Responsabile del trattamento</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Preposto</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Destinatario del trattamento</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Terzi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Competente</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il framework giuridico individua come soggetti esatti il Titolare (chi decide i mezzi), il Responsabile (chi esegue) e il Destinatario/Terzo che riceve i dati[cite: 17]. Termini come "Preposto" derivano dal Codice Civile aziendale, non dal Codice della Privacy[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q29">
+            <h4 class="question-title">29. La futura certificazione della cybersicurezza secondo il Regolamento (UE) 2019/881</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Prevede quattro livelli di certificazione con diverse "affidabilità"</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Prevede tre livelli di certificazione con diverse "affidabilità"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Livello "di base": basta un riesame e può prevedere l'autocertificazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Livello "sostanziale": riduce i rischi di attacchi da soggetti con risorse limitate</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Livello "elevato": inteso a ridurre al minimo il rischio di attacchi avanzati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Livello "critico": per annullare il rischio di attacchi avanzati e risorse significative</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il Cybersecurity Act europeo classifica tre (non quattro) livelli di sicurezza (Basic, Substantial, High). Il livello "Critico", inteso come annullamento matematico del rischio per attacchi State-sponsored, non è previsto dal regolamento[cite: 17].
+            </div>
+        </div>
+
+        <div class="question-block" id="q30">
+            <h4 class="question-title">30. Il Risk Appetite (Propensione al Rischio)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Può essere tradotto come Propensione al Rischio</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Delimita inferiormente l'area dei rischi da evitare o ridurre massimamente (Area Rossa)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Delimita superiormente l'area dei rischi da evitare o ridurre massimamente (Area Rossa)</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Delimita superiormente l'area dei rischi monitorati e gestiti costantemente (Area Gialla)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Indica il livello e tipo di rischio che l'organizzazione può assumere per i suoi obiettivi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Delimita l'area di rischio entro cui l'azienda desidera muoversi</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong> Il Risk Appetite definisce il "tetto massimo" (limite superiore) della zona di tolleranza. Qualsiasi rischio che sfora la propensione all'accettazione ed entra in "Zona Rossa", diventa un rischio inaccettabile da mitigare ad ogni costo[cite: 17].
+            </div>
+        </div>
+
+        <hr style="border-color: var(--border-color); margin: 3rem 0;">
+
+        <h2>Esercizi Pratici</h2>
+
+        <div class="question-block" id="ex1">
+            <h4 class="question-title">Esercizio 1: Topologia di Rete</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> Indicare la tipologia dei dispositivi rappresentati come rettangoli nello schema, indicando anche la tipologia di configurazione (Es. Switch, Firewall, ecc.).
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; width:20%;">Lettera</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Dispositivo Identificato</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">A</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Router</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">B</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Firewall</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">C</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">VPN</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">D</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Router</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">E</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Anomaly Detection</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">F</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Switch Ridondante</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">G</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Switch</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">H</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Switch Ridondante</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="question-block" id="ex2">
+            <h4 class="question-title">Esercizio 2: Calcoli Subnetting (128.32.156.8/19)</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> Data la sottorete 128.32.156.8/19, calcolare (con notazione decimale) i seguenti parametri.
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Parametro Richiesto</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Risultato Calcolato</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">La maschera di Rete</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>255.255.224.0</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">L'indirizzo di Rete</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>128.32.128.0</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">L'indirizzo di Broadcast</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>128.32.159.255</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Il numero di Host effettivamente disponibili</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>8.190</strong> (8.192 - 2)</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">L'indirizzo di Host più basso</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>128.32.128.1</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">L'indirizzo di Host più alto</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>128.32.159.254</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">La sottorete 128.32.128.0/10</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>Contiene la sottorete 1.</strong></td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+    <button id="back-to-top">↑</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

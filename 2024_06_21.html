@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOGC - 21 Giugno 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="page-header-title">21 Giugno 2024</h1>
+        <a href="index.html" class="nav-btn">Torna alla Home</a>
+    </header>
+    <main>
+        <div class="toc">
+            <h3>Indice dell'Esame</h3>
+            <ul>
+                <li><strong>Reti, Architetture e Minacce Cyber</strong>
+                    <ul>
+                        <li><a href="#q1">1. Packet Switching</a></li>
+                        <li><a href="#q2">2. URL e Linguaggio HTTP</a></li>
+                        <li><a href="#q3">3. Cause della Criminalità Informatica</a></li>
+                        <li><a href="#q4">4. Il Social Engineering</a></li>
+                        <li><a href="#q5">5. Advanced Persistent Threat (APT)</a></li>
+                        <li><a href="#q6">6. L'Incapsulamento (Modello ISO/OSI)</a></li>
+                        <li><a href="#q7">7. Protocolli seriali multipunto</a></li>
+                        <li><a href="#q8">8. Trasmissione deterministica</a></li>
+                        <li><a href="#q9">9. Il protocollo TCP/IP</a></li>
+                        <li><a href="#q10">10. Il modello di comunicazione Broadcast</a></li>
+                    </ul>
+                </li>
+                <li><strong>Infrastrutture IT e Organizzazione Aziendale</strong>
+                    <ul>
+                        <li><a href="#q11">11. Calcolo subnet 160.12.32.128/19</a></li>
+                        <li><a href="#q12">12. Lo Switch di rete</a></li>
+                        <li><a href="#q13">13. La rete Peer to Peer (P2P)</a></li>
+                        <li><a href="#q14">14. La Società a Responsabilità Limitata (S.r.l.)</a></li>
+                        <li><a href="#q15">15. Gli asset aziendali</a></li>
+                        <li><a href="#q16">16. Impatto di fermo linea e Disponibilità</a></li>
+                        <li><a href="#q17">17. Operazioni Oggettive Aziendali</a></li>
+                        <li><a href="#q18">18. Un ISMS secondo ISO/IEC 27000</a></li>
+                        <li><a href="#q19">19. Controlli ISO 27001 a supporto del GDPR</a></li>
+                        <li><a href="#q20">20. Attributi dei Controlli (Rev. 2022)</a></li>
+                    </ul>
+                </li>
+                <li><strong>Framework e Risk Management (NIST, IEC, ISO)</strong>
+                    <ul>
+                        <li><a href="#q21">21. Nuovi controlli ISO 27001 (Rev. 2022)</a></li>
+                        <li><a href="#q22">22. Gruppi di Controlli ISO 27001</a></li>
+                        <li><a href="#q23">23. ICT readiness for business continuity</a></li>
+                        <li><a href="#q24">24. Sottocategorie del NIST CSF Core</a></li>
+                        <li><a href="#q25">25. Tier "Consapevole" (Risk Informed) NIST CSF</a></li>
+                        <li><a href="#q26">26. Standard IEC 62443 (IACS)</a></li>
+                        <li><a href="#q27">27. Requisito "Supporto" (ISO 27001)</a></li>
+                        <li><a href="#q28">28. L'Analisi del rischio</a></li>
+                        <li><a href="#q29">29. La Tassonomia dei Rischi</a></li>
+                        <li><a href="#q30">30. Indicatori Chiave di Rischio Informatico (KRI)</a></li>
+                    </ul>
+                </li>
+                <li><strong>Esercizi Pratici</strong>
+                    <ul>
+                        <li><a href="#ex1">Esercizio 1: Topologia di Rete Industriale</a></li>
+                        <li><a href="#ex2">Esercizio 2: Subnetting VLAN</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Reti, Architetture e Minacce Cyber</h2>
+
+        <div class="question-block" id="q1">
+            <h4 class="question-title">1. Nel Packet Switching (la tecnica di commutazione):</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Il messaggio viene diviso in parti più piccole (packets) che vengono gestite singolarmente</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. I messaggi vengono raggruppati in pacchetti che vengono trasmessi insieme</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Al pacchetti viene assegnato nell'intestazione Indirizzo Sorgente, Destinazione ed altri dati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. I pacchetti viaggiano attraverso la rete, prendendo il percorso più breve possibile (routing)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. I pacchetti vengono riassemblati all'estremità ricevente nell'ordine di arrivo</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Se un messaggio arriva danneggiato verrà inviata notifica di re-invio, se corretto notifica di conferma</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nel packet switching (alla base di IP), i pacchetti viaggiano in modo indipendente affrontando latenze diverse. Arrivano spesso a destinazione "fuori ordine" e vengono riordinati dal protocollo ricevente in base al sequence number, non in base al momento di arrivo.
+            </div>
+        </div>
+
+        <div class="question-block" id="q2">
+            <h4 class="question-title">2. La sequenza di caratteri: "https://www.sitoesempio.it/indirizzo/?ref=NOME"</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Rappresenta un testo nel linguaggio http</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Rappresenta un indirizzo URL (Uniform Resource Locator)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Identifica univocamente l'indirizzo della risorsa "sitoesempio"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Ha come percorso "indirizzo"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Ha come stringa di query "ref=NOME"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Esprime "in chiaro" l'indirizzo IP</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'URL è un identificatore logico composto da protocollo, dominio (host), path e parametri. L'indirizzo IP numerico non è visibile, ma viene risolto in background dal server DNS.
+            </div>
+        </div>
+
+        <div class="question-block" id="q3">
+            <h4 class="question-title">3. Quali sono le ragioni della crescente diffusione della criminalità informatica</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. L'incessante sviluppo della tecnologia e le nuove opportunità di aggressione a beni e proprietà</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. La difficoltà della ricerca delle prove e i non sempre adeguati strumenti normativi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Il forte radicamento dei fenomeni cyber criminosi con il loro territorio d'origine</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. La transnazionalità dei fenomeni e la difformità degli strumenti normativi nei vari stati</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. La transizione del reato da un ambiente tangibile verso un ambiente dematerializzato</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. La transizione del reato da un ambiente intangibile verso uno materiale</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il cybercrime esplode proprio grazie alla sua natura globale e "transnazionale" che slegata le minacce dal territorio fisico d'origine, rendendo molto difficile l'intervento legale delle autorità locali a causa delle differenze normative internazionali.
+            </div>
+        </div>
+
+        <div class="question-block" id="q4">
+            <h4 class="question-title">4. Il Social Engineering</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una tecnica di attacco che può sfruttare anche strumenti non informatici</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Può utilizzare i siti "social" su cui sono esposte informazioni personali</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Può utilizzare il Baiting</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Può utilizzare un attacco tipo "forza bruta"</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Può utilizzare il Phishing</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. È diretto prevalentemente contro le aziende</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'ingegneria sociale manipola la psicologia umana usando esche (Baiting) o truffe mirate (Phishing) che colpiscono trasversalmente privati e aziende. L'attacco di tipo "forza bruta" (brute-force) è invece un attacco prettamente crittografico/tecnologico.
+            </div>
+        </div>
+
+        <div class="question-block" id="q5">
+            <h4 class="question-title">5. L'Advanced Persistent Threat (APT)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una minaccia perpetrata da un avversario con notevole bagaglio tecnico, risorse e periodi estesi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. È una minaccia che colpisce aziende molto grandi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. È di solito gestita da gruppi organizzati e/o da stati sovrani</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Utilizza software largamente disponibili per propagarsi meglio</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Può utilizzare software creati ad hoc, più versatili e complessi da rilevare</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Per raccogliere info può appoggiarsi ai servizi di intelligence del paese di provenienza</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Le APT non usano software banali di massa (malware off-the-shelf), ma exploit 0-day e codice "ad hoc" per operare sotto i radar per mesi. Non colpiscono solo mega-corporation, ma anche piccole aziende strategiche (supply-chain attack) o attivisti politici.
+            </div>
+        </div>
+
+        <div class="question-block" id="q6">
+            <h4 class="question-title">6. L'Incapsulamento secondo il modello ISO/OSI</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Permette a ciascun livello dello stack di comunicare con un proprio e specifico "protocollo"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Permette di fatto il funzionamento del modello stesso</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Avviene dal Livello Applicazione (7) al livello Collegamento (2) in trasmissione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Avviene dal Livello Applicazione (7) al livello Fisico (1) in trasmissione</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Avviene dal L. Collegamento (2) al L. Applicazione (7) in ricezione (Decapsulamento)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Avviene dal Livello Applicazione (7) al livello Fisico (1) in ricezione</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Livello 1 (Fisico) si occupa solo della conversione e trasmissione pura dei bit elettrici/ottici sul mezzo. Il processo di incapsulamento (aggiunta di header e frame) si ferma al Livello 2 (Collegamento Dati o Data Link).
+            </div>
+        </div>
+
+        <div class="question-block" id="q7">
+            <h4 class="question-title">7. I protocolli seriali multipunto</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono protocolli seriali punto-punto che possono collegare unità via connessione multidrop</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Possono utilizzare lo standard RS-422 e RS-485</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. In una configurazione con molte unità connesse solo un paio possono effettivamente comunicare contemporaneamente</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Possono utilizzare lo standard Bluetooth</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Gli standard RS-422 e RS-485 sono sempre contemporaneamente bidirezionali (full-duplex)</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Nel caso utilizzino lo standard RS-422 sono contemporaneamente bidirezionali</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                RS-422 supporta trasmissioni Full-Duplex (4 fili), mentre il diffusissimo RS-485 è tipicamente Half-Duplex (2 fili) dove su un bus multidrop solo un master e uno slave dialogano alternativamente. Bluetooth è wireless e non c'entra con le linee seriali cablate industriali.
+            </div>
+        </div>
+
+        <div class="question-block" id="q8">
+            <h4 class="question-title">8. Una trasmissione deterministica</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Viene semplicemente realizzata rispettando la sequenza temporale degli eventi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Viene semplicemente realizzata trasmettendo i messaggi con una bassa latenza</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Viene realizzata rispettando il principio di causalità (il nesso causa-effetto)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Se non lo è, la trasmissione è casuale (o semi-casuale)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Concettualmente coincide con la trasmissione real-time</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Si associa al real-time, in modo che la trasmissione avvenga entro limiti temporali ben precisi</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Bassa latenza significa solo "veloce", ma non garantisce tempi di consegna prevedibili e costanti. Il determinismo garantisce l'assoluta affidabilità temporale e sequenziale (necessaria nei sistemi OT e industriali per evitare guasti meccanici).
+            </div>
+        </div>
+
+        <div class="question-block" id="q9">
+            <h4 class="question-title">9. Quali ragioni hanno portato alla creazione del protocollo TCP/IP</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Realizzare una trasmissione stabile tra due host</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Realizzare una trasmissione veloce tra due host</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Realizzare una trasmissione monodirezionale affidabile</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Stabilire una connessione e assicurarsi che rimanga attiva fino alla fine</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Realizzare uno standard per il Packet Switching, alla base di internet</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Realizzare un protocollo affidabile, deterministico e realtime</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il TCP/IP è nato per creare reti decentralizzate, scalabili e resilienti ai guasti (Packet Switching) con connessioni bidirezionali affidabili (TCP). Tuttavia, proprio per via dell'instradamento a pacchetti liberi, TCP/IP è storicamente inadeguato per le trasmissioni real-time e deterministiche.
+            </div>
+        </div>
+
+        <div class="question-block" id="q10">
+            <h4 class="question-title">10. Il modello di comunicazione Broadcast:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Identifica la comunicazione uno a tutti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Identifica la comunicazione ad ampio spettro, uno a ad alcuni</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Può avvenire a livello 2 dello stack ISO (indirizzamento MAC)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Può avvenire a livello 3 dello stack ISO (Indirizzamento IP)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Può peggiorare la latenza nella rete</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Può migliorare la latenza di rete</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Broadcast invia traffico a "tutti i nodi" in un dominio, occupando banda e costringendo tutti i dispositivi a elaborare il pacchetto, il che degrada le prestazioni e la latenza (es. Broadcast storm). La comunicazione verso "alcuni" è definita Multicast.
+            </div>
+        </div>
+
+        <h2>Infrastrutture IT e Organizzazione Aziendale</h2>
+
+        <div class="question-block" id="q11">
+            <h4 class="question-title">11. La subnet 160.12.32.128/19:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Ha come indirizzo di rete 160.12.32.0</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Ha come indirizzo di broadcast 160.12.63.255</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Ha come indirizzo di broadcast 160.12.63.64</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Ha come maschera di sottorete 255.255.224.0</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Ha come maschera di sottorete 255.255.32.0</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Ha uno spazio di indirizzamento che arriva sino a (HostMax) 160.12.63.254</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La notazione /19 indica che i primi 19 bit determinano la rete, corrispondente a una maschera 255.255.224.0. Nel terzo ottetto i salti sono di 32 in 32 (0, 32, 64...). L'indirizzo .128 cade nel blocco 32-63, quindi l'ID di rete è 160.12.32.0 e il Broadcast 160.12.63.255.
+            </div>
+        </div>
+
+        <div class="question-block" id="q12">
+            <h4 class="question-title">12. Lo Switch di rete:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È un dispositivo elettronico intelligente, dotato di porte di varia tipologia</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Può essere un dispositivo non dotato di CPU e, se "Unmanaged", configurabile</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Può segmentare il dominio di broadcast attraverso le VPN</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Può avere una gestione "Unmanaged" o "Managed"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Può avere un instradamento di tipo "store-and-forward"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Se "Unmanaged" non permette la configurazione delle VLAN</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Gli switch segmentano logicamente le reti tramite VLAN (non VPN, che operano via Internet). Gli apparati "Unmanaged" sono plug-and-play e privi di intelligenza logica configurabile (non è possibile creare VLAN).
+            </div>
+        </div>
+
+        <div class="question-block" id="q13">
+            <h4 class="question-title">13. Una rete peer to peer</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Ha nodi che possono sia richiedere che fornire servizi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Ha nodi che condividono lo stesso network</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Ha nodi che sono specializzati per richiedere o fornire servizi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Può essere considerata come una rete logica da "pari" a "pari"</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. É un'architettura "fisica"</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. È un'architettura "logica"</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Peer-to-Peer (P2P) è un'architettura puramente logica in cui non c'è una gerarchia rigida. Ogni nodo (peer) possiede gli stessi privilegi degli altri, agendo contemporaneamente sia come client (richiede) sia come server (fornisce), contrariamente all'architettura client-server centralizzata.
+            </div>
+        </div>
+
+        <div class="question-block" id="q14">
+            <h4 class="question-title">14. La Società S.r.l.</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. È una società in cui i soci rispondono anche oltre i limiti del conferito</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. È una società di capitali le cui partecipazioni sono rappresentate da quote</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. È una società in cui risponde solo la società stessa con il suo patrimonio</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Sono sempre società di un solo imprenditore</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Sono Società a responsabilità limitata al capitale sottoscritto</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Sono Società a responsabilità illimitata oltre al capitale</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nelle S.r.l. (Società a Responsabilità Limitata), prevale l'autonomia patrimoniale perfetta. I soci non mettono a rischio i propri beni personali in caso di debito, a rispondere è esclusivamente il capitale investito nell'azienda.
+            </div>
+        </div>
+
+        <div class="question-block" id="q15">
+            <h4 class="question-title">15. Gli asset aziendali</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono quelle entità all'interno dell'azienda che generano valore</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Possono essere solo tangibili, ovvero fisici</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Possono essere tangibili o intangibili</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Se non gestiti possono mettere a repentaglio l'esistenza dell'organizzazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Di solito non sono informatici</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Se informatici sono soggetti a fattori di rischio in costante evoluzione</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nel mondo moderno, gli asset più critici di un'azienda sono spesso intangibili: brevetti, know-how, dati dei clienti e architetture informatiche. Essi possiedono un valore immenso e le minacce cyber verso di essi evolvono su base quotidiana.
+            </div>
+        </div>
+
+        <div class="question-block" id="q16">
+            <h4 class="question-title">16. Linea da 2.500 pz/ora, 24/7. Valore 100€/pz.</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Nel caso di fermo di 5 minuti, l'azienda perde circa 20.800 €</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Nel caso di fermo di 5 minuti, l'azienda perde circa 2.080 €</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Nel caso di fermo di 5 minuti, l'azienda perde circa 208 €</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Per limitare le perdite a 50.000€/anno, occorre Disponibilità > 99.997%</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Per limitare perdite a 50.000€/anno, occorre Disponibilità > 99.97%</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Per limitare perdite a 50.000€/anno, occorre Disponibilità > 99.7%</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Calcoli: 2500 pz/h = 250.000€/h. Al minuto = 4.166,66€. In 5 minuti sono persi 20.833€ (~20.800€). Per tollerare max 50.000€ di danno annuo, il fermo massimo è di 12 minuti totali in 365 giorni. Formula disponibilità: (525.600 minuti annui - 12) / 525.600 = 99.997%.
+            </div>
+        </div>
+
+        <div class="question-block" id="q17">
+            <h4 class="question-title">17. Nella gestione aziendale le Operazioni Oggettive possono essere:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Il reperimento di mezzi finanziari</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Le attività decisionali</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Gli Investimenti per lo sviluppo del business</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Le attività di controllo</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. La produzione (trasformazione in prodotti finiti o semilavorati)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Il disinvestimento di asset obsoleti</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                In economia aziendale, le "operazioni oggettive" sono gli atti materiali ed economici della gestione: acquisizione, trasformazione e cessione sul mercato. Le attività "decisionali" e "di controllo" attengono all'organizzazione manageriale soggettiva.
+            </div>
+        </div>
+
+        <div class="question-block" id="q18">
+            <h4 class="question-title">18. Un ISMS (ISO/IEC 27000) è un insieme di regole per:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Identificare gli stakeholder e le loro aspettative in termini di sicurezza</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Identificare rischi logici e fisici esistenti per le persone nell'org.</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Definire controlli e metodi di mitigazione dei rischi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Fissare obiettivi qualitativi e generici sulla sicurezza</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Misurare continuamente che i controlli siano effettivamente efficaci</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Migliorare continuativamente la postura Cybersecurity dell'organizzazione</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La ISO 27001 governa la sicurezza delle *informazioni*, non l'incolumità fisica (safety) delle persone (gestita dalla ISO 45001). Inoltre, lo standard impone che gli obiettivi di sicurezza stabiliti siano metricamente misurabili e specifici, mai "qualitativi e generici".
+            </div>
+        </div>
+
+        <div class="question-block" id="q19">
+            <h4 class="question-title">19. Quali dei seguenti controlli ISO 27001:2022 supportano la normativa GDPR?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Threat Intelligence</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>2. Data masking</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Data leakage prevention</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Monitoring activities</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. ICT readiness for business continuity</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Information deletion</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il GDPR impone la tutela della privacy (minimizzazione, pseudonimizzazione, diritto all'oblio). Controlli specifici per questo scopo sono l'offuscamento/mascheramento dei dati (Data masking), la prevenzione delle esfiltrazioni (DLP) e la corretta eliminazione dei record (Deletion).
+            </div>
+        </div>
+
+        <div class="question-block" id="q20">
+            <h4 class="question-title">20. Gli Attributi associati ai Gruppi di Controlli (ISO 27001 Rev 2022)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Possono essere utilizzati per filtrare, ordinare e presentare i controlli</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Permettono etichettatura per tipo (Preventivo, Investigativo, Correttivo)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Permettono etichettatura per Info Sec Properties (CIA)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Permettono etichettatura in base alla Criticità (da 1 a 100)</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Permettono etichettatura per Domini di Sicurezza (Governance, Resilience)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Permettono etichettatura in base ai Concetti NIST CSF (Identify...)</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La ISO 27001:2022 ha introdotto l'uso degli hashtag (attributi) per incrociare agilmente i controlli. Esistono 5 schemi ufficiali: Tipi di controllo, Proprietà della sicurezza, Concetti NIST, Funzionalità e Domini operativi. Non vi è alcun attributo ufficiale per assegnare punteggi "1 a 100".
+            </div>
+        </div>
+
+        <h2>Framework e Risk Management (NIST, IEC, ISO)</h2>
+
+        <div class="question-block" id="q21">
+            <h4 class="question-title">21. I nuovi controlli di ISO 27001 Rev. 2022 sono specializzati per:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Una maggior sicurezza nella gestione dei servizi Cloud</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Una migliore preparazione ICT per la Business Continuity</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Per privilegiare software di prodotto solo da determinati fornitori</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Migliore protezione dei dati in funzione del GDPR</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Il miglioramento dell'Internet Browsing (filtraggio siti Web)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Lo sviluppo sicuro del codice software</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                L'aggiornamento 2022 ha introdotto 11 nuovi controlli per modernizzare il framework colmando gap verso il Cloud, la Threat Intelligence, il Web Filtering e la Privacy. Ovviamente, lo standard è vendor-agnostic e non impone di comprare software da fornitori specifici.
+            </div>
+        </div>
+
+        <div class="question-block" id="q22">
+            <h4 class="question-title">22. I controlli ISO 27001 (Rev. 2022) sono raccolti nei gruppi:</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Le persone</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. I fornitori</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Gli oggetti fisici</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. La tecnologia</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Gli aspetti organizzativi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. La Supply Chain</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nella versione 2022 i precedenti 14 domini sono stati raggruppati in soli 4 macro-temi logici: Organizzativi (in cui rientrano anche Fornitori e Supply Chain), Persone (People), Fisici (Physical) e Tecnologici (Technological).
+            </div>
+        </div>
+
+        <div class="question-block" id="q23">
+            <h4 class="question-title">23. Controllo "ICT readiness for business continuity" (ISO 27001)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. E' un controllo di tipo Correttivo</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. E' un controllo di tipo Investigativo</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Migliora la disponibilità</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Migliora l'integrità dei dati e delle informazioni</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. E' nel dominio di sicurezza della Resilienza</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Prevede che le funzionalità ICT siano testate per la continuità</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                La "Readiness" per la Business Continuity è l'impalcatura che subentra "dopo" un guasto per correggere (controllo Correttivo) e minimizzare l'interruzione dei servizi, garantendone la Disponibilità (Availability). Non protegge contro manipolazioni o alterazioni dei dati (Integrità).
+            </div>
+        </div>
+
+        <div class="question-block" id="q24">
+            <h4 class="question-title">24. Le sottocategorie del NIST CSF Framework Core</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Sono i risultati che si possono ottenere</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Fanno riferimento ad esempi pratici presenti nei riferimenti informativi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Sono raggruppate in categorie che compongono le funzioni NIST CSF</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Non sono assimilabili ai controlli ISO27001</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Possono fare riferimento ad altri standard di settore</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Di solito non fanno mai riferimento ad altri standard di settore</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il NIST è "outcome-driven" (le sue sub-categories dichiarano gli obiettivi/risultati da raggiungere). Per implementarli, l'azienda legge le "Informative References" che puntano esplicitamente alle clausole di altri framework mappati (CIS Controls, ISO 27001, COBIT).
+            </div>
+        </div>
+
+        <div class="question-block" id="q25">
+            <h4 class="question-title">25. Nel Tier "Consapevole" (Risk Informed - Tier 2) del NIST CSF</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Le pratiche sono approvate dalla direzione ma potrebbero non essere stabilite come politica org.</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Le pratiche di rischio sono formalmente approvate ed espresse come policy</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Politiche, processi e procedure sono implementati e riesaminati</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Non è stato stabilito un approccio a livello di organizzazione al rischio</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Comprende il ruolo nell'ecosistema rispetto ai rapporti dipendenti o dipendenza, ma non entrambi</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Comprende completamente il ruolo nel suo ecosistema e contribuisce verso l'esterno</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nel livello di maturità Tier 2, c'è consapevolezza del rischio e la direzione supporta alcune difese, ma manca un framework diffuso, documentato istituzionalmente in tutta l'azienda ("org-wide approach"). La formalizzazione completa avviene nei successivi Tier 3 e 4.
+            </div>
+        </div>
+
+        <div class="question-block" id="q26">
+            <h4 class="question-title">26. Perché è stato realizzato lo standard IEC 62443?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Nelle org. esistono sistemi intelligenti per il business, oltre ai computer</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Per avere solamente uno standard di sicurezza informatica nelle industrie</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Per mitigare vulnerabilità nei sistemi di automazione industriale (IACS)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Gli standard più diffusi non riescono a rispondere a tutti i paradigmi IACS</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Per avere uno standard applicabile solamente nei reparti produttivi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Per proteggere reparti produttivi da vettori provenienti dalla rete office</span><span class="answer-badge answer-v">Vero</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                IEC 62443 colma la lacuna degli standard IT puri (come ISO 27001), essendo specializzato per proteggere SCADA, PLC, robot e valvole. Stabilisce i criteri di segmentazione/isolamento per evitare che un ransomware partito dai server aziendali (IT) blocchi la linea di fabbrica (OT).
+            </div>
+        </div>
+
+        <div class="question-block" id="q27">
+            <h4 class="question-title">27. Il requisito "Supporto" nel Sistema di Gestione (ISO 27001)</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. L'organizzazione deve mettere a disposizione le risorse necessarie per SGSI</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Devono essere determinate le competenze necessarie delle persone</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. È necessario garantire giusti livelli di competenza (formazione, addestramento)</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Coloro che operano debbono conoscere la policy e le sanzioni disciplinari</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Definisce criteri per la comunicazione al solo management</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>6. Definisce misure in prospettiva di minimizzazione dei costi</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il dominio "Supporto" vincola l'azienda a investire budget per formare *tutti* i collaboratori. La comunicazione della cultura della sicurezza non può limitarsi al top-management e lo standard non include mai direttive di "taglio/minimizzazione dei costi" a scapito della sicurezza.
+            </div>
+        </div>
+
+        <div class="question-block" id="q28">
+            <h4 class="question-title">28. Perché è necessario analizzare il rischio?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. L'analisi può aiutare l'azienda a identificare l'impatto dei pericoli</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Permette in ultimo di eliminare completamente l'impatto dei pericoli</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>3. Permette di mettere in atto le misure al fine di mitigare gli effetti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Individuare il livello massimo di rischio che un'org. può sopportare</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Una volta analizzato e valutato è possibile gestirlo correttamente</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. È uno strumento focalizzato solo su aspetti finanziari ed amministrativi</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Il Rischio "Zero" è irraggiungibile: i pericoli non si eliminano, si governano e mitigano in linea con il Risk Appetite (tolleranza al rischio) della direzione. L'analisi riguarda la vita umana, l'operatività fisica, le infrastrutture tecniche e non solo l'aspetto contabile/finanziario.
+            </div>
+        </div>
+
+        <div class="question-block" id="q29">
+            <h4 class="question-title">29. La Tassonomia dei Rischi Organizzativi</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. E' una corretta mappatura della tipologia che ne permette l'identificazione</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Permette una prima identificazione che richiede ulteriori approfondimenti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Definisce due macro raggruppamenti: rischi Interni ed Esterni</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>4. Definisce un primo macro raggruppamento contenente rischi Strategici e Operativi</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>5. Suddivide i rischi interni in: Strategici, Operativi e Finanziari</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Inserisce il rischio IT tra i rischi strategici</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                Nella classificazione standard aziendale, il primo raggruppamento spacca i rischi in Esterni (leggi, concorrenza) e Interni. All'interno della branca "Interni", i rischi si dividono in Strategici, Finanziari e Operativi. Il Rischio Informatico (IT) ricade strettamente nella sfera *Operativa*.
+            </div>
+        </div>
+
+        <div class="question-block" id="q30">
+            <h4 class="question-title">30. Quali dei seguenti possono essere indicatori chiave del rischio informatico (KRI)?</h4>
+            <ul class="solution-list">
+                <li class="solution-item"><span>1. Numero di attività critiche con vulnerabilită note</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>2. Vulnerabilità interne vs. vulnerabilità esterne</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>3. Tempo medio di rilascio del prodotto</span><span class="answer-badge answer-f">Falso</span></li>
+                <li class="solution-item"><span>4. Tempo medio di interruzione a seguito di un attacco</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>5. Numero di giorni per disattivare le credenziali degli ex dipendenti</span><span class="answer-badge answer-v">Vero</span></li>
+                <li class="solution-item"><span>6. Soddisfazione media del servizio IT</span><span class="answer-badge answer-f">Falso</span></li>
+            </ul>
+            <div class="motivazione">
+                <strong>Motivazione:</strong>
+                I Key Risk Indicators (KRI) misurano la "febbre" e l'esposizione al rischio dell'azienda. Ad esempio, il ritardo nel cancellare gli account dei dipendenti licenziati è un altissimo segnale di rischio. La "Soddisfazione utente" o la "Velocità di rilascio" sono invece KPI (Performance Indicator).
+            </div>
+        </div>
+
+        <h2>Esercizi Pratici</h2>
+
+        <div class="question-block" id="ex1">
+            <h4 class="question-title">Esercizio 1: Identificazione Topologia Dispositivi</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> Nello schema topologico rappresentato all'esame, associare alle lettere la tipologia corretta del dispositivo o funzione (es. Switch, Firewall, ecc.).
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; width:20%;">Lettera</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Dispositivo/Segmento Identificato</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">A, D</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Router</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">B, E, L</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Firewall (Isolamento perimetrale)</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">C, F, G, H, N, O</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Switch (Distribuzione e Accesso)</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">M</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Anomaly Detection (Sistemi IDS/IPS)</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">P</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Gateway (Interfaccia OT verso IACS)</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem; text-align:center;">Colori Verde/Giallo</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">VLAN (Virtual LAN, Segmentazione logica L2)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="question-block" id="ex2">
+            <h4 class="question-title">Esercizio 2: Calcoli di Subnetting IP</h4>
+            <div class="motivazione">
+                <strong>Traccia:</strong> Nello schema è rappresentata una LAN aziendale principale avente <strong>1024 indirizzi</strong> e partizionata in tre subnet secondarie. Calcolare i parametri di rete richiesti.
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:1rem; color:var(--text-main);">
+                <tr style="background:var(--bg-card);">
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Parametro Richiesto</th>
+                    <th style="border:1px solid var(--border-color); padding:0.5rem; text-align: left;">Risultato Calcolato</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo di Rete Principale (CIDR)</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>242.64.8.0/22</strong> (2^10 = 1024 IP)</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Maschera di Rete Decimale</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>255.255.252.0</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo di Broadcast Rete Principale</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>242.64.11.255</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo Subnet 1 (128 IP richiesti)</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>242.64.8.0/25</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo Subnet 2 (128 IP richiesti)</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>242.64.8.128/25</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Indirizzo Subnet 3 (256 IP richiesti)</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>242.64.9.0/24</strong></td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;">Tipologia Dispositivo "A" in testa alle Subnet</td>
+                    <td style="border:1px solid var(--border-color); padding:0.5rem;"><strong>Switch gestito</strong> (Layer 3 / Managed Switch)</td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+
+    <button id="back-to-top">↑</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
